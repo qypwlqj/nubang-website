@@ -439,3 +439,15 @@ body[data-scroll-locked] .hdr,
 body[data-scroll-locked] .mobile-navigation-sheet {
   margin-right: var(--removed-body-scroll-bar-size, 0px);
 }
+
+/* New photos must stay clear of the unchanged hero copy on compact desktops. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --col: min(205.33px, calc((100vw - 648px) / 3));
+    --pitch: calc(var(--col) * 1.3759);
+  }
+}
+/* The original relative mobile box extended 20px beyond its containing block. */
+@media (max-width: 1023px) {
+  .mosaic { width: calc(100% - 40px); }
+}
