@@ -6,7 +6,8 @@
     "dev": "next dev -H 0.0.0.0 -p ${PORT:-7100}",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate:catalog": "node scripts/validate-catalog.mjs"
   },
   "dependencies": {
     "next": "16.4.0",

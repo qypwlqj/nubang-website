@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Inter } from "next/font/google";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -28,7 +30,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className={`${archivo.variable} ${inter.variable}`}>
-      <body className="bg-paper text-ink font-sans">{children}</body>
+      <body className="bg-paper text-ink font-sans">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent-yellow focus:px-5 focus:py-3 focus:font-semibold focus:text-ink"
+        >
+          跳转到主要内容
+        </a>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
