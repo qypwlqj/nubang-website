@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Mosaic from "@/components/Mosaic";
 import ProductLines from "@/components/ProductLines";
+import { HomeAbout, HomeLab, HomeServices, HomeContact } from "@/components/HomeSections";
 
 export default function Home() {
   return (
@@ -44,7 +45,11 @@ export default function Home() {
 
         <Mosaic />
       </section>
+      <HomeAbout />
       <ProductLines />
+      <HomeLab />
+      <HomeServices />
+      <HomeContact />
     </main>
   );
 }
