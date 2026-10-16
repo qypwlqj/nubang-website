@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
+import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "服务与支持 | 努邦科技 NUBANG",
@@ -49,7 +50,7 @@ export default function ServicesPage() {
           <div className="mt-12 grid gap-4 md:grid-cols-3">
             {SERVICES.map((s, i) => (
               <Reveal key={s.index} delay={i * 100}>
-                <article className="grain flex h-full flex-col rounded-[22px] border border-nav-line bg-card-cream p-7">
+                <Card asChild variant="brand"><article className="grain flex h-full flex-col rounded-[22px] border border-nav-line bg-card-cream p-7">
                   <div className="flex items-center justify-between">
                     <span className="flex h-12 w-12 items-center justify-center rounded-full bg-ink text-white">
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -60,7 +61,7 @@ export default function ServicesPage() {
                   </div>
                   <h2 className="display mt-6 text-[20px] leading-[1.25]">{s.title}</h2>
                   <p className="relative z-[2] mt-3 text-[13.5px] leading-[1.75] text-muted">{s.desc}</p>
-                </article>
+                </article></Card>
               </Reveal>
             ))}
           </div>

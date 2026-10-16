@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "实验室方案 | 努邦科技 NUBANG",
@@ -27,13 +29,13 @@ export default function LabPage() {
           <Reveal>
             <div className="flex flex-wrap items-center gap-4">
               <p className="text-[11px] font-semibold tracking-[0.3em] text-paper/50">03 — 化学实验室解决方案</p>
-              <span className="flex items-center gap-1.5 rounded-full border border-accent-yellow/40 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-accent-yellow">
+              <Badge variant="brand" className="flex items-center gap-1.5 rounded-full border border-accent-yellow/40 px-3 py-1 text-[10px] font-bold tracking-[0.2em] text-accent-yellow">
                 <span className="relative flex h-1.5 w-1.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent-yellow opacity-75" />
                   <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-accent-yellow" />
                 </span>
                 AI 赋能
-              </span>
+              </Badge>
             </div>
             <h1 className="display mt-6 max-w-3xl text-[32px] leading-[1.15] sm:text-[46px]">
               软件与设备协同的
@@ -48,7 +50,7 @@ export default function LabPage() {
 
           <div className="mt-14 grid gap-4 lg:grid-cols-2">
             <Reveal delay={80}>
-              <div className="group relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8 transition-colors duration-500 hover:border-accent-blue/50">
+              <Card variant="brand" className="group relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8 transition-colors duration-500 hover:border-accent-blue/50">
                 <div
                   className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full opacity-40 blur-3xl transition-opacity duration-700 group-hover:opacity-70"
                   style={{ background: "radial-gradient(circle, #9fd5f7 0%, transparent 70%)" }}
@@ -69,11 +71,11 @@ export default function LabPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Card>
             </Reveal>
 
             <Reveal delay={160}>
-              <div className="group relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8 transition-colors duration-500 hover:border-accent-red/50">
+              <Card variant="brand" className="group relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8 transition-colors duration-500 hover:border-accent-red/50">
                 <div
                   className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full opacity-40 blur-3xl transition-opacity duration-700 group-hover:opacity-70"
                   style={{ background: "radial-gradient(circle, #ef5d44 0%, transparent 70%)" }}
@@ -94,7 +96,7 @@ export default function LabPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Card>
             </Reveal>
           </div>
         </div>

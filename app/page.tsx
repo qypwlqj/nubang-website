@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import Mosaic from "@/components/Mosaic";
 import ProductLines from "@/components/ProductLines";
 
@@ -24,12 +25,12 @@ export default function Home() {
           </p>
 
           <div className="rise mt-9 flex items-center gap-5" style={{ animationDelay: "0.7s" }}>
-            <Link
+            <Button asChild variant="brand"><Link
               href="/contact"
               className="rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-white transition-transform hover:scale-[1.03]"
             >
               联系我们
-            </Link>
+            </Link></Button>
             <Link href="/products" className="group flex items-center gap-2 text-[15px] font-semibold">
               了解产品
               <span className="flex h-8 w-8 items-center justify-center rounded-full border border-nav-rule transition-colors group-hover:bg-ink group-hover:text-white" aria-hidden="true">

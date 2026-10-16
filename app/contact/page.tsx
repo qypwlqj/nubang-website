@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
+import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "联系我们 | 努邦科技 NUBANG",
@@ -16,7 +17,7 @@ export default function ContactPage() {
               <br />
               都得到<span className="text-accent-yellow">合适的润滑</span>。
             </h1>
-            <a
+            <Button asChild variant="brand"><a
               href="tel:13813339996"
               className="mt-9 inline-flex items-center gap-3 rounded-full bg-paper px-8 py-4 text-[15px] font-bold text-ink transition-transform hover:scale-[1.03]"
             >
@@ -24,7 +25,7 @@ export default function ContactPage() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </a></Button>
           </Reveal>
 
           <Reveal delay={120}>

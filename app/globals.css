@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --color-paper: #f5f4ef;
@@ -385,3 +386,56 @@ body {
 }
 @media (max-width: 540px) { .catalog-grid { grid-template-columns: 1fr; } .catalog-card { padding: 24px; } .catalog-preview { font-size: 12px; } }
 @media (prefers-reduced-motion: reduce) { .catalog-card { transition: none; } .catalog-card:hover { transform: none; } }
+
+/* shadcn/ui semantic tokens reuse the existing brand palette. */
+@theme inline {
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-card-cream);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-card-cream);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-ink);
+  --color-primary-foreground: var(--color-paper);
+  --color-secondary: var(--color-accent-yellow);
+  --color-secondary-foreground: var(--color-ink);
+  --color-muted-foreground: var(--color-muted);
+  --color-accent: var(--color-accent-blue);
+  --color-accent-foreground: var(--color-ink);
+  --color-destructive: var(--color-accent-red);
+  --color-border: var(--color-nav-rule);
+  --color-input: var(--color-nav-rule);
+  --color-ring: var(--color-ink);
+}
+
+/* Keep the audited table geometry; shadcn supplies its semantic building blocks. */
+.product-table [data-slot="table-row"] { border-bottom-width: 0; }
+.product-table [data-slot="table-head"] { height: auto; color: inherit; }
+.product-table thead [data-slot="table-row"]:hover { background: transparent; }
+
+/* A modal Sheet with the original top-dropdown placement and brand styling. */
+.hdr[data-open="true"] { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.mobile-navigation-overlay { z-index: 60; background: transparent; animation: none; }
+.mobile-navigation-sheet {
+  z-index: 70;
+  inset-inline: 12px;
+  gap: 0;
+  background: #fff;
+  color: var(--color-ink);
+  border: 0;
+  border-top: 1px solid var(--color-nav-line);
+  border-radius: 0 0 var(--radius-tile) var(--radius-tile);
+  box-shadow: 0 0 0 1px var(--color-nav-line), 0 16px 36px -24px rgba(15, 15, 14, .3);
+  animation: none;
+  transition: none;
+}
+.mobile-navigation-close { position: absolute; right: 16px; top: -53px; }
+@media (min-width: 640px) {
+  .mobile-navigation-sheet { inset-inline: 24px; }
+  .mobile-navigation-close { right: 24px; }
+}
+/* Radix locks body scrolling; compensate fixed elements without shifting their width. */
+body[data-scroll-locked] .hdr,
+body[data-scroll-locked] .mobile-navigation-sheet {
+  margin-right: var(--removed-body-scroll-bar-size, 0px);
+}

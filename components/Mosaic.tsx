@@ -1,8 +1,4 @@
-import oilJpg from "@/lib/img/oil";
-import labJpg from "@/lib/img/lab";
-import gearsJpg from "@/lib/img/gears";
-import additivesJpg from "@/lib/img/additives";
-import serviceJpg from "@/lib/img/service";
+import Image from "next/image";
 
 type CellDef =
   | { kind: "photo"; src: string; label: string }
@@ -17,19 +13,19 @@ const COLS: { dir: "down" | "up"; cells: CellDef[] }[] = [
     dir: "down",
     cells: [
       { kind: "red" },
-      { kind: "photo", src: oilJpg, label: "润滑油品特写" },
-      { kind: "photo", src: gearsJpg, label: "工业齿轮润滑" },
+      { kind: "photo", src: "/images/oil.webp", label: "润滑油品特写" },
+      { kind: "photo", src: "/images/gears.webp", label: "工业齿轮润滑" },
       { kind: "blue" },
-      { kind: "photo", src: serviceJpg, label: "工程师现场服务" },
+      { kind: "photo", src: "/images/service.webp", label: "油品仓储与配送服务示意" },
     ],
   },
   {
     dir: "up",
     cells: [
       { kind: "yellow" },
-      { kind: "photo", src: labJpg, label: "化学实验室" },
+      { kind: "photo", src: "/images/lab.webp", label: "油液样品检测技术服务示意" },
       { kind: "dark" },
-      { kind: "photo", src: additivesJpg, label: "添加剂研究" },
+      { kind: "photo", src: "/images/additives.webp", label: "润滑油添加剂与原料样品示意" },
       { kind: "red" },
     ],
   },
@@ -38,9 +34,9 @@ const COLS: { dir: "down" | "up"; cells: CellDef[] }[] = [
     cells: [
       { kind: "blue" },
       { kind: "cream" },
-      { kind: "photo", src: gearsJpg, label: "工业齿轮润滑" },
+      { kind: "photo", src: "/images/gears.webp", label: "工业齿轮润滑" },
       { kind: "yellow" },
-      { kind: "photo", src: oilJpg, label: "润滑油品特写" },
+      { kind: "photo", src: "/images/oil.webp", label: "润滑油品特写" },
     ],
   },
 ];
@@ -58,10 +54,18 @@ function Cell({ cell }: { cell: CellDef }) {
     return (
       <div
         className="cell cell-photo grain"
-        role="img"
-        aria-label={cell.label}
-        style={{ ["--pic" as string]: `url(${cell.src})` }}
-      />
+        title={`${cell.label} · AI 生成示意，非实际公司设施照片`}
+      >
+        <Image
+          src={cell.src}
+          alt=""
+          fill
+          unoptimized
+          loading="eager"
+          sizes="(max-width: 1023px) 33vw, 206px"
+          className="object-cover"
+        />
+      </div>
     );
   }
   return <div className={`cell ${SOLID[cell.kind]}`} aria-hidden="true" />;

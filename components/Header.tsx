@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 const NAV = [
   { href: "/", label: "首页" },
@@ -18,7 +20,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [menuPathname, setMenuPathname] = useState(pathname);
   const headerRef = useRef<HTMLElement>(null);
-  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(70);
 
   // Reset the disclosure before rendering a different route, including history navigation.
   if (menuPathname !== pathname) {
@@ -30,31 +32,21 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(href + "/");
 
   useEffect(() => {
-    if (!open) return;
-
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setOpen(false);
-        const button = menuButtonRef.current;
-        if (button && button.getClientRects().length > 0) button.focus();
-      }
-    }
-
-    function onPointerDown(event: PointerEvent) {
-      if (event.target instanceof Node && !headerRef.current?.contains(event.target)) {
-        setOpen(false);
-      }
-    }
-
-    document.addEventListener("keydown", onKeyDown);
-    document.addEventListener("pointerdown", onPointerDown);
+    const header = headerRef.current;
+    if (!header) return;
+    const observer = new ResizeObserver(() => setHeaderHeight(header.getBoundingClientRect().height));
+    observer.observe(header);
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const closeOnDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", closeOnDesktop);
     return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.removeEventListener("pointerdown", onPointerDown);
+      observer.disconnect();
+      desktop.removeEventListener("change", closeOnDesktop);
     };
-  }, [open]);
+  }, []);
 
   return (
+    <Sheet open={open} onOpenChange={setOpen}>
     <header
       ref={headerRef}
       data-open={open || undefined}
@@ -93,52 +85,67 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Link
+          <Button asChild variant="brand"><Link
             href="/contact"
             onClick={() => setOpen(false)}
             className="hidden rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-white transition-transform hover:scale-[1.03] sm:block"
           >
             获取报价
-          </Link>
-          <button
-            ref={menuButtonRef}
-            type="button"
-            aria-controls="mobile-navigation"
-            aria-expanded={open}
-            aria-label={open ? "关闭菜单" : "打开菜单"}
-            onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-nav-rule lg:hidden"
-          >
-            <span className={`h-[2px] w-4 bg-ink transition-transform ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
-            <span className={`h-[2px] w-4 bg-ink transition-transform ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
-          </button>
+          </Link></Button>
+          <SheetTrigger asChild>
+            <Button
+              variant="brand"
+              type="button"
+              aria-label="打开菜单"
+              aria-controls="mobile-navigation"
+              className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-nav-rule lg:hidden"
+            >
+              <span className="h-[2px] w-4 bg-ink" />
+              <span className="h-[2px] w-4 bg-ink" />
+            </Button>
+          </SheetTrigger>
         </div>
       </div>
 
-      <div id="mobile-navigation" hidden={!open} className="max-h-[70dvh] overflow-y-auto border-t border-nav-line lg:hidden">
-        <nav aria-label="移动端导航" className="flex flex-col px-6 py-4">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-              onClick={() => {
-                setOpen(false);
-                menuButtonRef.current?.focus();
-              }}
-              className={`border-b border-nav-line py-3.5 text-[16px] font-semibold last:border-0 ${isActive(item.href) ? "text-accent-red" : ""}`}
-            >
-              {item.label}
-            </Link>
-          ))}
-          <a
-            href="tel:13813339996"
-            className="mt-3 rounded-full bg-ink px-5 py-3 text-center text-[14px] font-semibold text-white"
-          >
-            拨打 138 1333 9996
-          </a>
-        </nav>
-      </div>
     </header>
+
+      <SheetContent
+        id="mobile-navigation"
+        side="top"
+        showCloseButton={false}
+        overlayClassName="mobile-navigation-overlay"
+        className="mobile-navigation-sheet"
+        style={{ top: headerHeight }}
+      >
+        <SheetTitle className="sr-only">努邦科技网站导航</SheetTitle>
+        <SheetDescription className="sr-only">浏览网站页面或拨打电话咨询。按 Escape 关闭菜单。</SheetDescription>
+        <SheetClose asChild>
+          <Button variant="brand" type="button" aria-label="关闭菜单" className="mobile-navigation-close flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-nav-rule bg-white">
+            <span className="h-[2px] w-4 translate-y-[3.5px] rotate-45 bg-ink" />
+            <span className="h-[2px] w-4 -translate-y-[3.5px] -rotate-45 bg-ink" />
+          </Button>
+        </SheetClose>
+        <div className="max-h-[70dvh] overflow-y-auto">
+          <nav aria-label="移动端导航" className="flex flex-col px-6 py-4">
+            {NAV.map((item) => (
+              <SheetClose asChild key={item.href}>
+                <Link
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`border-b border-nav-line py-3.5 text-[16px] font-semibold last:border-0 ${isActive(item.href) ? "text-accent-red" : ""}`}
+                >
+                  {item.label}
+                </Link>
+              </SheetClose>
+            ))}
+            <SheetClose asChild>
+              <Button asChild variant="brand"><a href="tel:13813339996" className="mt-3 rounded-full bg-ink px-5 py-3 text-center text-[14px] font-semibold text-white">
+                拨打 138 1333 9996
+              </a></Button>
+            </SheetClose>
+          </nav>
+        </div>
+      </SheetContent>
+    </Sheet>
   );
 }

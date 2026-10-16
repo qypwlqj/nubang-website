@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { Card } from "@/components/ui/card";
 
 const PRODUCTS = [
   {
@@ -53,7 +54,7 @@ export default function ProductLines() {
           <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {PRODUCTS.map((p, i) => (
               <Reveal key={p.index} delay={i * 90}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-nav-line bg-card-cream transition-transform duration-500 hover:-translate-y-1.5 grain">
+                <Card asChild variant="brand"><article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-nav-line bg-card-cream transition-transform duration-500 hover:-translate-y-1.5 grain">
                   <div className={`relative flex h-36 items-end justify-between p-5 ${p.cls}`}>
                     <span className={`display text-[44px] leading-none ${p.dark ? "text-white/90" : "text-ink/80"}`}>
                       {p.index}
@@ -72,7 +73,7 @@ export default function ProductLines() {
                       </svg>
                     </Link>
                   </div>
-                </article>
+                </article></Card>
               </Reveal>
             ))}
           </div>
