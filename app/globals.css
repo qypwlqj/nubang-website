@@ -461,7 +461,7 @@ body[data-scroll-locked] .mobile-navigation-sheet {
 .catalog-group-body { padding: 22px; }
 .catalog-group-body > p:first-child { display: flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: .08em; }
 .catalog-group h2 { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 25px; margin-block: 14px 12px; }
-.catalog-group h2 span { font-size: 20px; font-family: Arial, sans-serif; }
+.catalog-group h2 svg { flex-shrink: 0; }
 .catalog-group-body > p:last-child { font-size: 12px; line-height: 1.8; color: var(--color-muted); }
 .catalog-group-context { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-bottom: 24px; margin-bottom: 28px; border-bottom: 1px solid var(--color-nav-rule); font-size: 13px; }
 .catalog-group-context a { text-decoration: underline; text-underline-offset: 4px; }

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { productGroups, type ProductGroupId } from "@/lib/product-groups";
 import { useState } from "react";
 import type { ProductSummary } from "@/lib/products";
@@ -37,7 +38,7 @@ export default function ProductCatalog({ products, group = "" }: {
       <nav className="catalog-groups" aria-label="产品大类">
         {productGroups.map((item, index) => <Link key={item.id} href={`/products?group=${item.id}`} scroll={false} aria-current={group === item.id ? "page" : undefined} className={`catalog-group catalog-tone-${index}`}>
           <div className="catalog-group-image"><Image src={item.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" /></div>
-          <div className="catalog-group-body"><p><span className="catalog-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")} / {products.filter((product) => product.group === item.id).length} 个产品/系列</p><h2 className="display">{item.name}<span aria-hidden="true">↗</span></h2><p>{item.description}</p></div>
+          <div className="catalog-group-body"><p><span className="catalog-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")} / {products.filter((product) => product.group === item.id).length} 个产品/系列</p><h2 className="display">{item.name}<ArrowUpRight size={20} aria-hidden="true" /></h2><p>{item.description}</p></div>
         </Link>)}
       </nav>
       <div className="catalog-group-context"><p>{groupName ? `${groupName} · 按细分类别继续筛选` : "全部产品 · 从三大类开始，或直接搜索型号与用途"}</p>{group ? <Link href="/products" scroll={false}>查看全部产品 →</Link> : null}</div>
@@ -81,13 +82,13 @@ export default function ProductCatalog({ products, group = "" }: {
           <div className="catalog-grid">
             {visible.map((product) => (
               <Card asChild variant="brand" key={product.slug}><Link className={`catalog-card catalog-tone-${product.categoryIndex % 3}`} href={`/products/${product.slug}`} aria-label={`查看 ${product.model} ${product.name} 的产品资料`}>
-                <div className="catalog-card-top"><Badge variant="brand" className="catalog-card-category">{product.category}</Badge><span className="catalog-card-arrow" aria-hidden="true">↗</span></div>
+                <div className="catalog-card-top"><Badge variant="brand" className="catalog-card-category">{product.category}</Badge><ArrowUpRight className="catalog-card-arrow" size={20} aria-hidden="true" /></div>
                 <p className="display catalog-model">{product.model}</p>
                 {product.name !== product.model ? <h3>{product.name}</h3> : null}
                 <p className="catalog-card-variants">{product.variants.length ? `型号 / 牌号：${product.variants.join(" · ")}` : null}</p>{product.needsReview ? <p className="catalog-review-badge">部分原资料待确认</p> : null}
                 <p className="catalog-card-description">{product.introduction}</p>
                 <p className="catalog-card-variants">{product.previewLabel}</p><dl className="catalog-preview">{product.preview.map((row, index) => <div key={index}><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl>
-                <span className="catalog-card-link">产品详情与技术指标 <span aria-hidden="true">↗</span></span>
+                <span className="catalog-card-link">产品详情与技术指标 <ArrowUpRight size={20} aria-hidden="true" /></span>
               </Link></Card>
             ))}
           </div>
