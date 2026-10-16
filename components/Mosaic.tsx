@@ -5,7 +5,6 @@ type CellDef =
   | { kind: "red" }
   | { kind: "yellow" }
   | { kind: "blue" }
-  | { kind: "cream" }
   | { kind: "dark" };
 
 const COLS: { dir: "down" | "up"; cells: CellDef[] }[] = [
@@ -33,10 +32,10 @@ const COLS: { dir: "down" | "up"; cells: CellDef[] }[] = [
     dir: "down",
     cells: [
       { kind: "blue" },
-      { kind: "cream" },
-      { kind: "photo", src: "/images/gears.webp", label: "工业齿轮润滑" },
+      { kind: "photo", src: "/images/product-raw-materials.webp", label: "基础油原料示意" },
+      { kind: "photo", src: "/images/product-lubricants.webp", label: "工业成品油示意" },
       { kind: "yellow" },
-      { kind: "photo", src: "/images/oil.webp", label: "润滑油品特写" },
+      { kind: "photo", src: "/images/product-custom.webp", label: "成品油定制调配示意" },
     ],
   },
 ];
@@ -45,7 +44,6 @@ const SOLID: Record<string, string> = {
   red: "bg-accent-red cell-solid grain",
   yellow: "bg-accent-yellow cell-solid grain",
   blue: "bg-accent-blue cell-solid grain",
-  cream: "bg-card-cream cell-solid grain",
   dark: "bg-card-dark cell-dark grain grain-dark",
 };
 

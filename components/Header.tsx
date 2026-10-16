@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -67,16 +68,19 @@ export default function Header() {
 
       {/* main row */}
       <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" onClick={() => setOpen(false)} className="leading-none" aria-label="努邦科技首页">
+        <Link href="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-2 leading-none sm:gap-3" aria-label="努邦科技首页">
+          <Image src="/images/company-logo.png" alt="" width={1254} height={1254} sizes="48px" className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12" preload />
+          <span>
           <span className="display block text-[22px] tracking-tight sm:text-[26px]">
             NUBANG<span className="text-accent-red">.</span>
           </span>
           <span className="mt-1 block text-[9px] font-medium tracking-[0.28em] text-muted">
             上海努邦科技有限公司
           </span>
+          </span>
         </Link>
 
-        <nav aria-label="主导航" className="hidden items-center gap-5 text-[14px] font-medium lg:flex">
+        <nav aria-label="主导航" className="hidden items-center gap-3 text-[13px] font-medium lg:flex xl:gap-5 xl:text-[14px]">
           {NAV.map((item) => (
             <Link key={item.href} href={item.href} aria-current={isActive(item.href) ? "page" : undefined} className={`whitespace-nowrap transition-colors hover:text-accent-red ${isActive(item.href) ? "text-accent-red" : ""}`}>
               {item.label}

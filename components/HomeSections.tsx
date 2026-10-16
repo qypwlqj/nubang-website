@@ -1,3 +1,5 @@
+import CompanyAchievements from "@/components/CompanyAchievements";
+import LabScene from "@/components/LabScene";
 import Link from "next/link";
 import { ArrowRight, Check, Headphones, Lightbulb, Wrench } from "lucide-react";
 import Reveal from "@/components/Reveal";
@@ -29,6 +31,7 @@ export function HomeAbout() {
             业务覆盖润滑油原料、添加剂与成品油供应，并提供成品油定制与化学实验室整体解决方案，
             从原料选型到应用支持，为工业客户提供合适的润滑方案。
           </p>
+          <CompanyAchievements />
           <SectionLink href="/about">了解公司简介</SectionLink>
         </Reveal>
       </div>
@@ -53,7 +56,8 @@ export function HomeLab() {
           <h2 id="home-lab-heading" className="display mt-6 max-w-3xl text-[32px] leading-[1.15] sm:text-[46px]">软件与设备协同的<br />实验室整体方案。</h2>
           <p className="mt-6 max-w-2xl text-[15px] leading-[1.8] text-paper/60">以软件服务支持与实验室设备连接油品检测、数据分析与应用需求，提供化学实验室整体解决方案。</p>
         </Reveal>
-        <div className="mt-14 grid gap-4 lg:grid-cols-2">
+        <Reveal delay={80}><LabScene /></Reveal>
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
           {LAB_GROUPS.map((group, index) => (
             <Reveal key={group.en} delay={(index + 1) * 80}>
               <Card variant="brand" className="h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8">
@@ -106,15 +110,18 @@ export function HomeServices() {
 
 export function HomeContact() {
   return (
-    <section aria-labelledby="home-contact-heading" className="grain-dark grain relative rounded-t-[32px] bg-ink py-24 text-paper">
-      <div className="relative z-[2] mx-auto max-w-6xl px-5 sm:px-10">
-        <Reveal>
-          <p className="text-[11px] font-semibold tracking-[0.3em] text-paper/50">05 — 联系我们</p>
-          <h2 id="home-contact-heading" className="display mt-6 max-w-3xl text-[34px] leading-[1.12] sm:text-[54px]">让每一台设备，<br />都得到<span className="text-accent-yellow">合适的润滑</span>。</h2>
-          <p className="mt-6 max-w-2xl text-[15px] leading-[1.8] text-paper/60">咨询原料、添加剂、成品油或实验室方案，与我们沟通您的实际应用需求。</p>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-            <SectionLink href="/contact" dark>查看联系方式</SectionLink>
-            <a href="tel:13813339996" className="mt-8 text-[18px] font-semibold hover:text-accent-yellow">138 1333 9996</a>
+    <section aria-labelledby="home-contact-heading" className="bg-paper px-5 pb-12 sm:px-10 sm:pb-16">
+      <div className="grain relative mx-auto max-w-6xl overflow-hidden rounded-[28px] bg-accent-yellow px-7 py-12 sm:px-12 sm:py-16">
+        <Reveal className="relative z-[2] grid items-end gap-8 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p className="text-[11px] font-semibold tracking-[0.3em] text-ink/60">05 — 联系我们</p>
+            <h2 id="home-contact-heading" className="display mt-6 text-[32px] leading-[1.15] sm:text-[48px]">让每一台设备，<br />都得到合适的润滑。</h2>
+            <p className="mt-6 max-w-xl text-[15px] leading-[1.8] text-ink/70">咨询原料、添加剂、成品油或实验室方案，与我们沟通您的实际应用需求。</p>
+          </div>
+          <div className="flex flex-col items-start lg:items-end">
+            <a href="tel:13813339996" className="display text-[26px] leading-none transition-opacity hover:opacity-65 sm:text-[30px]">138 1333 9996</a>
+            <p className="mt-3 text-[12px] text-ink/60">微信同号 · 欢迎沟通您的需求</p>
+            <SectionLink href="/contact">查看联系方式</SectionLink>
           </div>
         </Reveal>
       </div>

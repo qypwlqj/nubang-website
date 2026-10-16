@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LabScene from "@/components/LabScene";
 import Reveal from "@/components/Reveal";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -48,7 +49,8 @@ export default function LabPage() {
             </p>
           </Reveal>
 
-          <div className="mt-14 grid gap-4 lg:grid-cols-2">
+          <Reveal delay={80}><LabScene /></Reveal>
+          <div className="mt-8 grid gap-4 lg:grid-cols-2">
             <Reveal delay={80}>
               <Card variant="brand" className="group relative h-full overflow-hidden rounded-[22px] border border-white/10 bg-white/[0.04] p-8 transition-colors duration-500 hover:border-accent-blue/50">
                 <div

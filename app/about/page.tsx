@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
+import { COMPANY_STATS } from "@/lib/company";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "公司简介 | 努邦科技 NUBANG",
 };
 
-const STATS = [
-  { value: "2012", label: "公司成立年份", accent: false },
-  { value: "100+", label: "产品种类", accent: true },
-  { value: "24h", label: "售后支持", accent: false },
-  { value: "10+", label: "专利技术", accent: false },
-  { value: "3倍", label: "润滑效果提升", accent: true },
-];
+
 
 export default function AboutPage() {
   return (
@@ -34,7 +29,7 @@ export default function AboutPage() {
 
           <Reveal delay={120}>
             <dl className="mt-14 grid grid-cols-2 gap-y-10 border-t border-ink/10 pt-10 md:grid-cols-5">
-              {STATS.map((s) => (
+              {COMPANY_STATS.map((s) => (
                 <div key={s.label} className="flex flex-col">
                   <dt className="order-2 mt-2 text-[13px] text-muted">{s.label}</dt>
                   <dd className={`display order-1 text-[40px] leading-none sm:text-[48px] ${s.accent ? "text-accent-red" : ""}`}>
