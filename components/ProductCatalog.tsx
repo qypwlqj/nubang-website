@@ -27,7 +27,7 @@ export default function ProductCatalog({ products, group = "" }: {
   const terms = query.trim().split(/\s+/).filter(Boolean).map(normalize);
   const visible = groupProducts.filter((product) =>
     (!category || product.category === category) && terms.every((term) =>
-      normalize(product.model + product.name + product.category + product.introduction + product.variants.join(" ")).includes(term)),
+      normalize(product.model + product.name + product.category + product.introduction + product.variants.join(" ") + product.searchKeywords).includes(term)),
   );
   if (sort === "model") visible.sort((a, b) => a.model.localeCompare(b.model, "en", { numeric: true }));
   function reset() { setQuery(""); setCategory(""); setSort("source"); }
@@ -74,7 +74,7 @@ export default function ProductCatalog({ products, group = "" }: {
           <div className="catalog-sort"><Label className="leading-normal" htmlFor="product-sort">排列方式</Label><NativeSelect variant="brand" id="product-sort" value={sort} onChange={(event) => setSort(event.target.value)}><NativeSelectOption value="source">资料顺序</NativeSelectOption><NativeSelectOption value="model">型号顺序</NativeSelectOption></NativeSelect></div>
         </div>
         <div className="catalog-result-meta">
-          <p role="status" aria-live="polite" aria-atomic="true">{category || groupName || "全部产品"} <span>· {visible.length} 个产品/系列产品</span></p>
+          <p role="status" aria-live="polite" aria-atomic="true">{category || groupName || "全部产品"} <span>· {visible.length} 个产品/系列</span></p>
           {query || category || sort !== "source" ? <Button variant="brand" type="button" onClick={reset}>重置筛选</Button> : null}
         </div>
         {visible.length ? (
@@ -91,7 +91,7 @@ export default function ProductCatalog({ products, group = "" }: {
               </Link></Card>
             ))}
           </div>
-        ) : <div className="catalog-empty"><p className="display">没有找到匹配的产品</p><p>试试其他型号、名称或用途关键词，或清除当前分类筛选。</p><Button variant="brand" type="button" onClick={reset}>查看全部 {groupProducts.length} 个产品/系列产品</Button></div>}
+        ) : <div className="catalog-empty"><p className="display">没有找到匹配的产品</p><p>试试其他型号、名称或用途关键词，或清除当前分类筛选。</p><Button variant="brand" type="button" onClick={reset}>查看全部 {groupProducts.length} 个产品/系列</Button></div>}
       </div>
     </div>
     </>

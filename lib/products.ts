@@ -38,6 +38,7 @@ export function getProduct(slug: string) {
 }
 export function getSummary(product: CatalogProduct) {
   return {
+    searchKeywords: product.sourceFilename,
     model: product.model, name: product.name, introduction: product.introduction, variants: product.variants,
     group: product.group, category: product.category, categoryIndex: product.categoryIndex, slug: product.slug,
     previewLabel: product.variants.length ? `参数摘录 · ${product.technicalTables[0]?.headers[1] ?? "典型数据"}` : "",
