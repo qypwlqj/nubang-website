@@ -451,3 +451,35 @@ body[data-scroll-locked] .mobile-navigation-sheet {
 @media (max-width: 1023px) {
   .mosaic { width: calc(100% - 40px); }
 }
+
+/* Three-level product collection: broad families, contextual types, model cards. */
+.catalog-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 28px; }
+.catalog-group { overflow: hidden; border: 1px solid var(--color-nav-rule); border-radius: 22px; background: var(--color-card-cream); transition: border-color .2s, transform .2s; }
+.catalog-group:hover { transform: translateY(-3px); }
+.catalog-group[aria-current="page"] { border-color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-ink); }
+.catalog-group-image { position: relative; aspect-ratio: 16/7; overflow: hidden; }
+.catalog-group-body { padding: 22px; }
+.catalog-group-body > p:first-child { display: flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: .08em; }
+.catalog-group h2 { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 25px; margin-block: 14px 12px; }
+.catalog-group h2 span { font-size: 20px; }
+.catalog-group-body > p:last-child { font-size: 12px; line-height: 1.8; color: var(--color-muted); }
+.catalog-group-context { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-bottom: 24px; margin-bottom: 28px; border-bottom: 1px solid var(--color-nav-rule); font-size: 13px; }
+.catalog-group-context a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 767px) {
+  .catalog-groups { grid-template-columns: 1fr; gap: 12px; }
+  .catalog-group { display: grid; grid-template-columns: 100px minmax(0, 1fr); }
+  .catalog-group-image { aspect-ratio: auto; height: 100%; }
+  .catalog-group-body { padding: 16px; }
+  .catalog-group h2 { font-size: 22px; margin-block: 8px; }
+}
+.catalog-card-variants { margin-top: 12px; color: var(--color-muted); font-size: 11px; line-height: 1.7; overflow-wrap: anywhere; }
+.catalog-review-badge { font-size: 11px; font-weight: 600; margin-top: 10px; }
+.product-variants { margin-block: 20px; font-size: 14px; line-height: 1.8; }
+.product-review { margin-block: 24px; padding: 24px; background: var(--color-card-cream); border: 1px solid var(--color-nav-rule); border-left: 4px solid var(--color-accent-red); border-radius: 12px; }
+.product-review h2 { font-weight: 700; margin-bottom: 12px; }
+.product-review ul, .product-list { list-style: disc; padding-left: 20px; }
+.product-review li { font-size: 13px; line-height: 1.8; margin-block: 6px; }
+.product-table-title { font-weight: 700; margin-block: 24px 12px; }
+.product-chart { margin-top: 28px; }
+.product-chart img { width: 100%; max-width: 534px; height: auto; }
+.product-chart figcaption, .product-source p { color: var(--color-muted); font-size: 12px; line-height: 1.8; margin-top: 14px; }

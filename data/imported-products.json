@@ -1,0 +1,1090 @@
+[
+  {
+    "slug": "greasez-ca",
+    "model": "GREASEZ CA",
+    "name": "GREASEZ CA易成脂型高碱值磺酸钙",
+    "title": "GREASEZ CA易成脂型高碱值磺酸钙",
+    "group": "raw-materials",
+    "category": "润滑脂增稠原料",
+    "introduction": "GREASEZ CA是一种特制高碱值（400 TBN）磺酸钙，由于配方中特殊的磺酸比例和助剂，仅仅加入水在适宜的温度下搅拌就能转化成脂，适合用于生产高品质复合磺酸钙润滑脂。它的钙/磺酸比经过专门优化，具有很好的油溶性和与其它添加剂的配伍性。 GREASEZ CA与矿物油，加氢油和烃类合成油相容。",
+    "variants": [
+      "GREASEZ CA"
+    ],
+    "technicalTables": [
+      {
+        "title": "原料典型数据",
+        "headers": [
+          "项目",
+          "典型数据"
+        ],
+        "rows": [
+          [
+            "20℃密度",
+            "1.2"
+          ],
+          [
+            "硫含量, (m/m)%",
+            "1.3"
+          ],
+          [
+            "钙含量, (m/m) %",
+            "15.2"
+          ],
+          [
+            "总碱值",
+            "405"
+          ],
+          [
+            "100℃粘度，cSt",
+            "55"
+          ],
+          [
+            "开口闪点，℃",
+            "170"
+          ]
+        ],
+        "notes": [
+          "原表密度与总碱值未写单位；不补造。概述“400 TBN”与表中“405”分别保留。"
+        ]
+      },
+      {
+        "title": "制脂产品典型数据",
+        "headers": [
+          "项目",
+          "产品典型数据"
+        ],
+        "rows": [
+          [
+            "工作锥入度，mm",
+            "250(剂/油=1/1)"
+          ],
+          [
+            "滴点",
+            "330+"
+          ],
+          [
+            "105剪切变化值",
+            "10"
+          ],
+          [
+            "水淋流失(79℃),(m/m)%",
+            "Nil"
+          ],
+          [
+            "烧结负荷，N",
+            "3920"
+          ],
+          [
+            "蒸发损失(180℃)，(m/m)%",
+            "2.5"
+          ]
+        ],
+        "notes": [
+          "这是制脂产品数据，不能当作原料液体性能。原文“工作锥入度，mm”“105剪切变化值”照录，疑似单位/上标问题，未修正。"
+        ]
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "GREASEZ CA是一种粘稠的液体，含特殊挥发性组分，在操作中不要接触到眼睛和皮肤。最高贮存温度不应超过93℃。\n有关本产品安全操作和使用的其他信息，请参阅产品安全说明书（SDS）。",
+    "applications": [
+      "将计量的GREASEZ CA和基础油打入釜内，加热搅拌，然后加入计量的水，升温到90-100℃，保持1-2hr；釜内物稠化后，升温，添加计量的氢氧化钙，硼酸和十二羟基硬脂酸，调油，升温到高温，保持，然后打入冷却釜，加入必要的添加剂，均质、冷却、调油、检验、出料、包装。"
+    ],
+    "performance": [],
+    "reviewNotes": [
+      "原料典型数据与制脂后的产品典型数据分表展示，不能互相替代。",
+      "原资料待确认：制脂表中的“工作锥入度，mm”及“105剪切变化值”单位/上标疑有误；保留原文，选型前请确认。"
+    ],
+    "sourceFilename": "GREASEZ易成脂型高碱值磺酸钙.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "hdp",
+    "model": "HDP",
+    "name": "HDP润滑脂高温稳定剂",
+    "title": "HDP润滑脂高温稳定剂",
+    "group": "additives",
+    "category": "润滑脂高温稳定剂",
+    "introduction": "HDP润滑脂高温稳定剂是由精心设计的分子结构和均衡调配的组分，经专用生产工艺设备加工制成。",
+    "variants": [
+      "HDP12",
+      "HDP13",
+      "HDPA",
+      "HDPB",
+      "HDPC",
+      "HDPD"
+    ],
+    "technicalTables": [
+      {
+        "title": "中文性能指标",
+        "headers": [
+          "项目",
+          "HDP12",
+          "HDP13",
+          "检验方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "白色固体",
+            "无色到浅黄液体",
+            "目测"
+          ],
+          [
+            "气味",
+            "淡",
+            "淡",
+            "感官"
+          ],
+          [
+            "密度,g/ml",
+            "0.88-0.95",
+            "0.88-0.95",
+            "企业方法"
+          ],
+          [
+            "熔点，℃",
+            "45",
+            "0",
+            "GB/T 510"
+          ],
+          [
+            "闪点(开口)， ℃",
+            ">150",
+            ">150",
+            "GB/T3536"
+          ]
+        ],
+        "notes": []
+      },
+      {
+        "title": "中文使用效果",
+        "headers": [
+          "润滑脂类型/滴点, ℃",
+          "空白 0%",
+          "HDP12 1%",
+          "HDP12 3%",
+          "HDP13 1%",
+          "HDP13 3%"
+        ],
+        "rows": [
+          [
+            "无水钙",
+            "153",
+            "162",
+            "188",
+            "163",
+            "188"
+          ],
+          [
+            "锂基脂",
+            "195",
+            "241",
+            "255",
+            "241",
+            "255"
+          ],
+          [
+            "复合锂",
+            "268",
+            "295",
+            "330+",
+            "305",
+            "330+"
+          ]
+        ],
+        "notes": [
+          "#润滑脂的脂肪酸组成和锂钙比例等对滴点提升效果有较大的影响，以上数据仅供参考，客户需要根据自身产品情况和需要调整HDP添加剂的加入量。"
+        ]
+      },
+      {
+        "title": "English typical property",
+        "headers": [
+          "ITEM",
+          "HDPA/HDPB/HDPC/HDPD",
+          "Method"
+        ],
+        "rows": [
+          [
+            "Appearance/odor",
+            "Colorless to pale transparent liquid with characteristic odor",
+            "visual"
+          ],
+          [
+            "Density,g/ml",
+            "0.88-0.95",
+            "In-house"
+          ],
+          [
+            "Pour point，℃",
+            "<-10",
+            "GB/T3535"
+          ],
+          [
+            "Flash point(open cup)， ℃",
+            ">150",
+            "GB/T3536"
+          ]
+        ],
+        "notes": []
+      },
+      {
+        "title": "English performance",
+        "headers": [
+          "Drop point, ℃(Lithium)",
+          "Blank 0%",
+          "A 1%",
+          "A 3%",
+          "B 1%",
+          "B 3%",
+          "C 1%",
+          "C 3%",
+          "D 1%",
+          "D 3%"
+        ],
+        "rows": [
+          [
+            "Drop point, ℃(Lithium)",
+            "197",
+            "300",
+            "330+",
+            "305",
+            "330+",
+            "260",
+            "330+",
+            "284",
+            "330+"
+          ]
+        ],
+        "notes": [
+          "Composition of fatty acids and lithium/calcium ratio in grease greatly affect final performance of HDP series, the data just for reference only, it is users’ duty to adjust treat level per their products.",
+          "HDP series is also effective to anhydrous calcium grease."
+        ]
+      }
+    ],
+    "technicalNotes": "#润滑脂的脂肪酸组成和锂钙比例等对滴点提升效果有较大的影响，以上数据仅供参考，客户需要根据自身产品情况和需要调整HDP添加剂的加入量。\nComposition of fatty acids and lithium/calcium ratio in grease greatly affect final performance of HDP series, the data just for reference only, it is users’ duty to adjust treat level per their products.\nHDP series is also effective to anhydrous calcium grease.\n\n英文资料补充：\nFor high temperature performance improvement of grease based on 12-HSA soap, especially effectively susceptible to lithium 12-HSA resulting in higher viscosity, thickness and drop point.\nRecommended to be blended into grease under room temperature or 50 ℃ below.\nHDP series should be stored in clean, dry and away from direct sunlight, slightly translucent change has little affect to its performance.\nOnce opened, contents should be used up ASAP, intake of moisture will affect its performance.\nWith characteristic odor, wear proper protective glove and mask to prevent intake or contact with eyes, mouth , nose or skin.\nRefer to SDS for detail information.\n\n英文原资料介绍与性能：\nHDP series temperature resistant improver is composed of delicately formulated molecular structure and components and made by dedicated production process and facilities.\nImprove colloidal stability of grease based on 12-HAS soap under high temperature, mitigate lowering tendency of viscosity and thickness under higher temperature, enhance upper temperature threshold of grease, and impart negligent unwell effects to grease.",
+    "storagePackaging": "20L塑料桶，200L铁桶。\n产品应贮存于清洁、干燥、避光、荫凉处。储存后有浑浊现象不影响产品的使用性能。如凝固，请放到100℃以下水中、烘箱或加热带加热熔化，加热时注意打开盖子。\n包装启封后，应尽快用完。长期接触空气会对性能有一定的影响。因此用后应及时将盖封严，防止空气或水分等混入影响品质。\n产品高温下有一定气味，操作时注意要穿戴适当的劳动保护用具，防止眼睛、口鼻、皮肤接触和吸入。",
+    "applications": [
+      "用于含12-羟基硬脂酸皂类稠化剂的润滑脂高温性能提升，特别能显著提高锂基润滑脂的高温粘度、高温稠度和滴点。",
+      "建议在常温加入，混合均匀即可，最高调配温度不宜超过50℃。"
+    ],
+    "performance": [
+      "提高以12-羟基硬脂酸皂类为稠化剂的润滑脂的高温胶体稳定性，减缓高温粘度和稠度下降趋势，提升润滑脂的最高使用温度，对润滑脂的其它性能几无不良影响。"
+    ],
+    "reviewNotes": [
+      "原资料待确认：中文型号 HDP12、HDP13 与英文型号 HDPA、HDPB、HDPC、HDPD 未注明对应关系；以下为同一资料中的两组型号记录，不表示彼此等同。",
+      "中文“熔点”和英文“倾点”是不同指标；常温调配最高50℃与凝固后100℃以下加热属于不同操作。"
+    ],
+    "sourceFilename": "HDP润滑脂高温稳定剂TDS.docx",
+    "sourceLocator": "T1, T2, T3, T4",
+    "image": "/images/hdp-performance-chart.png"
+  },
+  {
+    "slug": "hr500",
+    "model": "HR500",
+    "name": "HR500聚酯",
+    "title": "HR500聚酯",
+    "group": "raw-materials",
+    "category": "聚酯增塑剂",
+    "introduction": "HR500聚酯是由二元酸和二元醇缩聚而成的高分子聚合型增塑剂。该聚酯为无色或黄色粘滞透明油状液体，无味，无毒，不溶于水。具有耐抽出、耐迁移、耐挥发性极佳，耐油、耐高温性能超群的特点，还兼有光热稳定性好、电绝缘性好、无毒、相容性较好的综合性能。",
+    "variants": [
+      "HR500 100#",
+      "HR500 500#"
+    ],
+    "technicalTables": [
+      {
+        "title": "产品规格",
+        "headers": [
+          "项目",
+          "100#",
+          "500#",
+          "测试方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "无色至淡黄色液体",
+            "无色至淡黄色液体",
+            "目测"
+          ],
+          [
+            "粘度（100℃）mm2/s",
+            "80-150",
+            "300-500",
+            "GB/T265"
+          ],
+          [
+            "闪点(开口) ℃",
+            ">250",
+            ">250",
+            "GB/T3536"
+          ],
+          [
+            "酸值mgKOH/g",
+            "<10.0",
+            "<10.0",
+            "GB/T264"
+          ]
+        ],
+        "notes": [
+          "Pages原生预览独立核对了跨两个牌号的合并单元格。"
+        ]
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "200kg铁桶包装\n启用后，应及时将盖封严，防止混入杂质，以免影响使用效果。",
+    "applications": [
+      "由于分子量大，挥发性低，迁移性小， 耐烃类和耐肥皂水抽出，是性能很好的耐热性和耐久性增塑剂。广泛应用于耐油、耐高温特殊制品，如：耐油橡胶，耐油密封材料，耐油填充膏等等。"
+    ],
+    "performance": [],
+    "reviewNotes": [
+      "原资料标题为HR500，技术表列100#、500#两个牌号，均保留。",
+      "安全处理请遵循经确认的SDS；原文含溶剂擦洗皮肤描述，本页不将其作为急救建议。"
+    ],
+    "sourceFilename": "HR500聚酯TDS.doc",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "hsci-8d",
+    "model": "HSCI-8D",
+    "name": "HSCI-8D专用腐蚀抑制剂",
+    "title": "HSCI-8D专用腐蚀抑制剂",
+    "group": "additives",
+    "category": "腐蚀抑制剂",
+    "introduction": "HSCI-8D 是一种液体噻二唑类无灰金属硫化氢缓蚀剂，同时具有极压和辅助抗氧作用，广泛应用于各种车用及工业用润滑油脂和金属加工液。在极低浓度下就能有效地阻止活性硫对铜和铜合金的腐蚀。",
+    "variants": [
+      "HSCI-8D"
+    ],
+    "technicalTables": [
+      {
+        "title": "质量指标",
+        "headers": [
+          "项目",
+          "典型值"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黄色透明液"
+          ],
+          [
+            "密度，g/cm3（20℃）",
+            "1.01"
+          ],
+          [
+            "运动粘度，mm2 /s（40℃）",
+            "15.6"
+          ],
+          [
+            "闪点, ℃（开口）",
+            "172"
+          ],
+          [
+            "酸值（mgKOH/g）",
+            "15.1"
+          ],
+          [
+            "硫含量,m/m（%）",
+            "31.5"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "原资料同类/相关产品参考（不代表等同替代）：RTVANDERBILTCUVAN 826",
+    "storagePackaging": "净重 25 kg塑桶 / 200kg 钢桶包装",
+    "applications": [
+      "用于各种车用及工业用润滑油脂和金属加工液。",
+      "可以直接添加到客户的产品配方中，添加前需测试配伍性，建议添加量为 0.1～0.5%"
+    ],
+    "performance": [
+      "低加入量、极佳油溶性",
+      "浅色低气味",
+      "极佳抑制硫腐蚀性能，优异抗氧协同性能."
+    ],
+    "reviewNotes": [
+      "原资料提及的其他品牌产品仅作资料参考，不代表等同替代认证。"
+    ],
+    "sourceFilename": "HSCI8D-TDS.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "nb-scc",
+    "model": "NB SCC",
+    "name": "NB SCC新型复合磺酸钙润滑脂",
+    "title": "NB SCC新型复合磺酸钙润滑脂",
+    "group": "lubricants",
+    "category": "复合磺酸钙润滑脂",
+    "introduction": "NB SCC是以新型复合磺酸钙为稠化剂，高度精制的矿油/合成油为基础油，添加多种添加剂精制而成，适合各种工况条件的高级润滑脂。",
+    "variants": [
+      "NB SCC 1号",
+      "NB SCC 2号",
+      "NB SCC 3号"
+    ],
+    "technicalTables": [
+      {
+        "title": "典型理化数据",
+        "headers": [
+          "指 标 项目",
+          "1 号",
+          "2 号",
+          "3 号",
+          "测试方法"
+        ],
+        "rows": [
+          [
+            "工作锥入度 1/10 mm",
+            "320",
+            "280",
+            "230",
+            "GB/T 269"
+          ],
+          [
+            "十万次剪切锥入度差值,%",
+            "<10",
+            "<10",
+            "<10",
+            "GB/T 269"
+          ],
+          [
+            "滴点 ℃",
+            "330+",
+            "330+",
+            "330+",
+            "GB/T3498"
+          ],
+          [
+            "分油（ 100 ℃ 24h ） %",
+            "2.5",
+            "1.3",
+            "0.8",
+            "SH/T0324"
+          ],
+          [
+            "四球试验 PB N",
+            "980",
+            "980",
+            "980",
+            "GB/T0202"
+          ],
+          [
+            "四球试验 PD N",
+            "3903",
+            "3903",
+            "3903",
+            "GB/T0202"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "",
+    "applications": [
+      "适用冶金行业热轧、冷轧辊轴承，连铸设备的大包回转台、结晶器、二冷段、扇形段辊道、拉矫机和摆剪机，输送辊道的润滑及纺织印染行业各种烘燥机高温轴承，还适用于造纸行业各种高温、高湿度、重负荷部位的润滑，以及一些在水下工作的部位的润滑。 适用温度： -20 — 180 ℃."
+    ],
+    "performance": [
+      "优良的耐高温性能，保证在高温下润滑良好。",
+      "优异的抗水冲刷性能，不会被水冲掉或因吸水变软。",
+      "极突出的防腐防锈性能，能抵抗海水，耐金属表面的浸蚀，具有较长的使用寿命。",
+      "具有优良的抗磨极压性能。",
+      "具有良好的机械安定性，良好的胶体安定性，良好的氧化安定性。"
+    ],
+    "reviewNotes": [
+      "原资料待确认：试验方法“GB/T0202”及十万次剪切锥入度差值的“%”单位疑有误；按原文展示，选型前请确认。"
+    ],
+    "sourceFilename": "NB SCC新型复合磺酸钙润滑脂.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "nb1106",
+    "model": "NB1106",
+    "name": "NB1106高温轨道防护剂",
+    "title": "NB1106高温轨道防护剂",
+    "group": "lubricants",
+    "category": "高温轨道与链条防护润滑剂",
+    "introduction": "NB1106高温轨道防护剂是由高温稠化剂稠化合成油，并加有抗磨极压剂、抗氧剂、固体润滑剂而制成。",
+    "variants": [
+      "NB1106"
+    ],
+    "technicalTables": [
+      {
+        "title": "典型性能",
+        "headers": [
+          "项目",
+          "典型性能",
+          "试验方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黑色均匀半流体",
+            "目测"
+          ],
+          [
+            "锥入度@25℃,0.1mm",
+            "350",
+            "GB/T 269"
+          ],
+          [
+            "腐蚀(45#钢,100℃,3h)",
+            "合格",
+            "SH/T 0331"
+          ],
+          [
+            "蒸发量（180℃,1h）%",
+            "2.20",
+            "SH/T 0337"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "",
+    "applications": [
+      "NB1106高温轨道防护剂推荐应用于300℃以上的高温下长期工作的轨道、链条和轴承的润滑，如铝锭输送轨道、钢材冷床、涂装线和建材烘烤线等，最高短期使用温度范围可达600℃。"
+    ],
+    "performance": [
+      "NB1106高温轨道防护剂具有高温稳定性，清净性和极压抗磨性能，在高温重负荷的工况下不易结焦，不卡死，无流失，保证了高温轨道链条轴承的长期稳定运行，且不会污染周边的环境。",
+      "NB1106高温轨道防护剂采用环保生物降解原料，具有环境友好性能；采用惰性添加剂高温下不会产生难闻气味。"
+    ],
+    "reviewNotes": [
+      "温度描述来自产品资料：长期应用“300℃以上”、短期最高“600℃”，不代表连续600℃使用承诺；实际工况请先咨询验证。"
+    ],
+    "sourceFilename": "NB1106高温轨道防护剂PDS.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "nb1108",
+    "model": "NB1108",
+    "name": "NB1108系列高温润滑脂",
+    "title": "NB1108系列高温润滑脂",
+    "group": "lubricants",
+    "category": "高温润滑脂",
+    "introduction": "NB1108高温润滑脂系以有机稠化剂稠化合成油，并加有多种添加剂精制而成。NB1108高温润滑脂符合美军标准MIL-G-25013D的要求。",
+    "variants": [
+      "NB1108",
+      "NB1108-1"
+    ],
+    "technicalTables": [
+      {
+        "title": "主要技术指标",
+        "headers": [
+          "项 目",
+          "1108",
+          "1108-1",
+          "测试方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "灰色均匀油膏",
+            "白色均匀油膏",
+            "目测"
+          ],
+          [
+            "滴点，℃， 不低于",
+            "300",
+            "300",
+            "GB/T 3498"
+          ],
+          [
+            "锥入度(1／4锥入度，0.1mm)",
+            "65~80",
+            "65~80",
+            "GB/T 269"
+          ],
+          [
+            "蒸发度(200℃)，％(m／m) 不大于",
+            "4.0",
+            "4.0",
+            "SH/T 0337"
+          ],
+          [
+            "相似粘度(-50℃，10s-1)，Pa．s 不大于",
+            "1800",
+            "1800",
+            "SH/T 0048"
+          ],
+          [
+            "氧化安定性，压力降，Mpa 不大于",
+            "0.034",
+            "0.034",
+            "SH/T 0325"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "原资料同类/相关产品参考（不代表等同替代）：Aeroshell Grease 15A, Mobil Grease 24, Klüber UNISLDOW TK44N2",
+    "storagePackaging": "1kg盒装，15kg桶装。\n1．应贮存于清洁、干燥避光处。使用前，应将润滑部位清洗干净，晾干或吹干后再涂抹本产品。\n2．勿与其它油脂混用：启用后，应及时将盖封严，防止混入杂质。",
+    "applications": [
+      "NB1108高温润滑脂适用于高温、高速或严寒区野外工作及温度超过200℃以上的宽温度范围工作的滚动轴承的润滑。如航空电机、电器、离合器的推力轴承，高温风机、赛车轮毂轴承。塑料拉伸拉幅机、涤纶热定型机、树脂整理机、熔盐泵电机、长环蒸化机、高温染色缸、蒸呢机、防缩机等高温操作运转轴承的润滑。适用温度范围：-60～+300℃。"
+    ],
+    "performance": [
+      "NB1108高温润滑脂具有良好的高低温性能，尤其是高温性能特别优异，在高温下具有长的轴承寿命。NB1108-1高温润滑脂还具有良好的抗水性、抗氧化性能、防锈性能。"
+    ],
+    "reviewNotes": [
+      "MIL-G-25013D为原资料符合性声明，本资料未附检测或认证证书。",
+      "原文中的国外同类产品仅供资料对照，不作为等同替代承诺。"
+    ],
+    "sourceFilename": "NB1108系列高温润滑脂.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "tk200",
+    "model": "TK200",
+    "name": "TK200高粘度合成酯",
+    "title": "TK200高粘度合成酯",
+    "group": "raw-materials",
+    "category": "合成酯基础油",
+    "introduction": "TK200产品是一种适用范围很宽的合成酯，与矿物基础油、合成基础油等相容性良好*，根据需要可以作为基础油或添加剂使用。\nTK200产品由于具有高温稳定、超强的黏附性及抗剪切、抗水性能，可以作为高温润滑基础油或润滑增强剂、黏附剂、粘指剂或增粘剂等。性价比高，广泛适用于润滑油、润滑脂以及金属加工液等行业。",
+    "variants": [
+      "TK200 200"
+    ],
+    "technicalTables": [
+      {
+        "title": "典型性能",
+        "headers": [
+          "项目",
+          "200"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黄色透明粘稠液体"
+          ],
+          [
+            "密度,g/cm3 ASTM D4052",
+            "0.9810"
+          ],
+          [
+            "运动粘度，mm2/s  ASTM D445\n@100℃",
+            "1500-2500"
+          ],
+          [
+            "粘度指数 ASTM D2270",
+            ">200"
+          ],
+          [
+            "闪点(开口),℃  ASTM D92",
+            ">300"
+          ],
+          [
+            "中和值,mgKOH/g  ASTM D974",
+            "<5"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "*:但由于基础油品种繁多，具体基础油的相容性需要客户自己验证。",
+    "storagePackaging": "TK200产品应储存在阴凉、干燥的环境；避免接触皮肤和眼睛；\n详细安全环保消防运输储存等信息参见MSDS.",
+    "applications": [
+      "润滑脂  高温润滑脂/开式齿轮脂/抗水润滑脂，提高黏附性，减少摩擦和漏失；",
+      "工业润滑油  减震器油/链条润滑剂/合成齿轮油/压缩机油，增粘和粘度指数；",
+      "金属加工  金属轧制油/切削液/磨削液/拉拔液/冲压液，提高润滑性；"
+    ],
+    "performance": [],
+    "reviewNotes": [
+      "该产品可用作基础油或添加剂，本目录按合成酯原料归类。与TAKY保留为独立系列，不依据相似指标合并。"
+    ],
+    "sourceFilename": "TK200高粘度合成酯PDS.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "taky",
+    "model": "TAKY",
+    "name": "TAKY高分子量聚合酯",
+    "title": "TAKY高分子量聚合酯",
+    "group": "additives",
+    "category": "聚合酯增粘与润滑添加剂",
+    "introduction": "Taky是一种适用范围很宽的聚合酯，与矿物基础油、合成基础油等相容性良好*，根据需要可以作为增粘剂或润滑添加剂使用。\nTaky由于具有高温稳定、超强的黏附性及抗剪切、抗水解性能，可以作为高温条件下使用的润滑增强剂、黏附剂、粘指剂或增粘剂等。\nTaky性价比高，广泛适用于润滑油、润滑脂以及金属加工液等行业。",
+    "variants": [
+      "TAKY 200/200L",
+      "TAKY 500"
+    ],
+    "technicalTables": [
+      {
+        "title": "典型性能",
+        "headers": [
+          "项目",
+          "Taky 200/200L",
+          "Taky 500"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黄色透明粘稠液体",
+            "黄色透明粘稠液体"
+          ],
+          [
+            "密度,g/cm3 ASTM D4052",
+            "0.9810",
+            "0.9860"
+          ],
+          [
+            "运动粘度，mm2/s  ASTM D445\n@100℃",
+            "1500-2500",
+            "4000-5500"
+          ],
+          [
+            "粘度指数 ASTM D2270",
+            ">200",
+            ">200"
+          ],
+          [
+            "闪点(开口),℃  ASTM D92",
+            ">300",
+            ">300"
+          ],
+          [
+            "酸值,mgKOH/g  ASTM D974",
+            "<10/<5",
+            "<5"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "*:但由于基础油品种繁多，具体基础油的相容性需要客户自己验证。",
+    "storagePackaging": "应储存在阴凉、干燥的环境；\n避免接触皮肤和眼睛；\n详细安全、环保、消防、运输和储存等信息参见SDS.",
+    "applications": [
+      "润滑脂  高温润滑脂/开式齿轮脂/抗水润滑脂，提高黏附性，减少摩擦和漏失；",
+      "工业润滑油  减震器油/链条润滑剂/合成齿轮油/压缩机油，增粘和粘度指数；",
+      "金属加工  金属轧制油/切削液/磨削液/拉拔液/冲压液，提高润滑性；"
+    ],
+    "performance": [],
+    "reviewNotes": [
+      "原资料待确认：文件名为Takif，正文名称为TAKY/Taky；本页沿用正文系列名。",
+      "原资料待确认：200/200L合列，酸值<10/<5未明确各自对应关系，保留合列，不拆分猜测。"
+    ],
+    "sourceFilename": "Takif高粘度化学合成酯PDS.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "nb6518a",
+    "model": "NB6518A",
+    "name": "NB6518A高温链条油",
+    "title": "NB6518A高温链条油",
+    "group": "lubricants",
+    "category": "高温链条油",
+    "introduction": "NB6518A系以优质合成油为基础油，添加抗氧、抗磨、防锈等添加剂精制而成。",
+    "variants": [
+      "NB6518A"
+    ],
+    "technicalTables": [
+      {
+        "title": "主要理化指标",
+        "headers": [
+          "项目",
+          "典型数据"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黄色透明粘稠液体"
+          ],
+          [
+            "运动粘度，(40℃)，mm2/s",
+            "320"
+          ],
+          [
+            "粘度指数,",
+            "110"
+          ],
+          [
+            "中和值，mg KOH/g",
+            "<1.0"
+          ],
+          [
+            "闪点(开口)，℃",
+            "260"
+          ],
+          [
+            "蒸发量(204℃，6.5h)，%(m/m)",
+            "<8"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "原资料同类/相关产品参考（不代表等同替代）：Klüber公司  PRIMIUM FLUID-SPECIAL ， Hotemp plus\n原资料同类/相关产品参考（不代表等同替代）：ROCOL公司 CL-175",
+    "storagePackaging": "4L塑料桶、20L塑料桶、200L铁桶或按用户需要包装。\nNB6518A在高温下有一定蒸发损失，使用时要特别注意打开定型机的风道，以免发生事故。",
+    "applications": [
+      "NB6518A适用于纺织印染及塑料工业的拉伸拉幅机，热定型机，建材工业的高温烘房等高温设备的链条传动系统的润滑。使用温度范围：-20 ~ +250℃。"
+    ],
+    "performance": [
+      "NB6518A高温稳定性良好；润滑抗磨损性突出，可承受较重负荷；残炭少，链条可长期保持清洁状态；粘温性好，机器低温易启动；挥发少，能有效节约润滑油料，不污染环境，改善工作条件。"
+    ],
+    "reviewNotes": [
+      "原资料中的同类品牌信息仅供资料对照，不作为等同替代承诺。"
+    ],
+    "sourceFilename": "努邦链条油资料6518系列.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "nb6518c",
+    "model": "NB6518C",
+    "name": "NB6518C高温链条油",
+    "title": "NB6518C高温链条油",
+    "group": "lubricants",
+    "category": "高温链条油",
+    "introduction": "NB6518C以特制的合成油为基础油，添加抗氧、抗磨、防锈等添加剂制成。",
+    "variants": [
+      "NB6518C 220#",
+      "NB6518C 320#"
+    ],
+    "technicalTables": [
+      {
+        "title": "主要理化指标",
+        "headers": [
+          "项目",
+          "220#",
+          "320#",
+          "测试方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黄色透明液体",
+            "黄色透明液体",
+            "目测"
+          ],
+          [
+            "运动粘度，mm2/s",
+            "",
+            "",
+            "GB/T265"
+          ],
+          [
+            "100℃",
+            "24.05",
+            "30.29",
+            ""
+          ],
+          [
+            "40℃",
+            "235.3",
+            "328.0",
+            ""
+          ],
+          [
+            "粘度指数",
+            "128",
+            "128",
+            "GB/T1995"
+          ],
+          [
+            "闪点(开口)，℃",
+            ">280",
+            ">280",
+            "GB/T3536"
+          ],
+          [
+            "倾点，℃",
+            "-35",
+            "-30",
+            "GB/T3535"
+          ],
+          [
+            "酸值，mgKOH／g",
+            "<1",
+            "<1",
+            "GB/T264"
+          ],
+          [
+            "蒸发损失(250℃ x 1 h)%",
+            "<5.0",
+            "<5.0",
+            "SH/T0059"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "原资料同类/相关产品参考（不代表等同替代）：Klüber公司  Primium super M93  Hotemp Super Hotemp super N\n原资料同类/相关产品参考（不代表等同替代）：ROCOL公司 CL-500",
+    "storagePackaging": "4L塑料桶、20L塑料桶、200L铁桶或按用户需要包装。\n使用过程中，链条和滑轨应经常保持薄油膜，避免过度润滑。",
+    "applications": [
+      "NB6518C/6600适用于纺织印染及塑料工业的拉伸拉幅机、热定型机、建材工业的高温烘房等高温设备链条的润滑。使用温度最高不超过280℃."
+    ],
+    "performance": [
+      "优良的高温稳定性，长期高温条件下仍具有流动性；结焦少且形成的焦质可溶入新油中，延长清焦周期；低的挥发损失和冷却区油凝结，不会因油引起薄膜破损；粘附性能好；在高温下长期工作仍能保持良好的润滑性能；良好的金属浸润性，易于扩散，确保链条充分润滑；优良的高低温性能，使用温度范围宽。"
+    ],
+    "reviewNotes": [
+      "原资料待确认：应用段提及NB6518C/6600，未给出6600独立指标，不将其新增为独立型号。"
+    ],
+    "sourceFilename": "努邦链条油资料6518系列.docx",
+    "sourceLocator": "T2",
+    "image": ""
+  },
+  {
+    "slug": "synthetic-ester-fire-resistant-hydraulic-oil",
+    "model": "合成酯型抗燃液压油",
+    "name": "合成酯型抗燃液压油",
+    "title": "合成酯型抗燃液压油",
+    "group": "lubricants",
+    "category": "抗燃液压油",
+    "introduction": "以特殊结构的合成酯为基础油，均衡调配氧化、腐蚀抑制剂和润滑添加剂等功能剂加工而成。属无毒，可生物降解的绿色润滑剂。按国际标准分类属 ISO-L-HFD 类的合成酯型抗燃液压油",
+    "variants": [
+      "ISO 32",
+      "ISO 46",
+      "ISO 68",
+      "ISO 100"
+    ],
+    "technicalTables": [
+      {
+        "title": "主要理化指标",
+        "headers": [
+          "项目",
+          "ISO 32",
+          "ISO 46",
+          "ISO 68",
+          "ISO 100"
+        ],
+        "rows": [
+          [
+            "运动粘度 40℃,mm2/s",
+            "28.8～35.2",
+            "41.4～50.6",
+            "61.2～74.8",
+            "90～110"
+          ],
+          [
+            "运动粘度 100℃,mm2/s 不小于",
+            "7.00",
+            "9.00",
+            "11.00",
+            "13.00"
+          ],
+          [
+            "粘度指数      不低于",
+            "180",
+            "180",
+            "180",
+            "180"
+          ],
+          [
+            "闪点(开口)，℃    不低于",
+            "270",
+            "270",
+            "270",
+            "270"
+          ],
+          [
+            "燃点，℃      不低于",
+            "300",
+            "300",
+            "300",
+            "300"
+          ],
+          [
+            "歧管着火试验",
+            "通过",
+            "通过",
+            "通过",
+            "通过"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "替代矿物型液压油时，要求系统含矿物油量低于5%；\n替代水基液压油时，要求系统含水量低于0.2%;\n替代磷酸酯液压油时，要求进行系统密封材料和涂料的相容性试验。\n注意系统清洁，防止混入杂质，定期检测系统清洁度等指标。",
+    "applications": [
+      "应用于钢铁厂连铸生产线，高炉，热轧，拆炉机，铸造，钢水包以及电厂，煤炭行业要求抗燃的液压系统，可以替代磷酸酯液压油。使用温度-25-160℃，使用压力可达40MPa.。"
+    ],
+    "performance": [
+      "闪点燃点高，难燃性良好，粘温性能好，润滑性优异，使用温度压力高，与金属非金属材料适应性好，降解性好，环境友好，生物安全。"
+    ],
+    "reviewNotes": [
+      "原资料未标商品型号；ISO 32/46/68/100为黏度等级。",
+      "抗燃不等于绝对不燃。ISO-L-HFD及环保、生物降解等表述为原资料声明，未附独立认证。"
+    ],
+    "sourceFilename": "合成酯型抗燃液压油PDS.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  },
+  {
+    "slug": "csa",
+    "model": "CSA",
+    "name": "CSA系列复合磺酸",
+    "title": "CSA系列复合磺酸",
+    "group": "raw-materials",
+    "category": "复合长链磺酸",
+    "introduction": "CSA系列复合磺酸是采用进口长碳链ɑ烯烃，经AlCl3低温烷基化工艺，与苯/甲苯/二甲苯进行烷基化，然后与气态SO3进行低温膜式磺化反应而得。\n针对润滑油脂用途，产品复配了高中低碳链的ɑ烯烃及双取代烷基苯磺酸。",
+    "variants": [
+      "CSA"
+    ],
+    "technicalTables": [
+      {
+        "title": "技术指标",
+        "headers": [
+          "项目",
+          "技术指标",
+          "检验方法"
+        ],
+        "rows": [
+          [
+            "外观",
+            "黑棕色粘稠液体",
+            "目测"
+          ],
+          [
+            "密度@20℃,g/mL",
+            "0.095-1.05",
+            "GB/T4472"
+          ],
+          [
+            "粘度@40℃,mm2/s",
+            "报告",
+            "GB/T265"
+          ],
+          [
+            "磺酸含量，%",
+            "≮80",
+            "GB/T5173"
+          ],
+          [
+            "总酸值,mgKOH/g",
+            "100-130",
+            "GB/T7304"
+          ],
+          [
+            "无机酸含量，%",
+            "≯1.0",
+            "GB/T6366"
+          ],
+          [
+            "水分，%",
+            "≯1.0",
+            "GB/T260"
+          ]
+        ],
+        "notes": []
+      }
+    ],
+    "technicalNotes": "",
+    "storagePackaging": "200L/塑料桶，1000L吨桶\n产品具有一定酸性和腐蚀性，避免直接接触钢铁材质容器和管道；\n操作处理时采取合适的防护措施，避免溅到眼睛或皮肤接触；\n空桶处理以及泄漏处置，按国家相关法律法规执行；\n详情请参阅产品MSDS。",
+    "applications": [
+      "所得CSA复合磺酸推荐用于磺酸钙润滑脂、磺酸钙润滑脂所需的高碱值磺酸钙，以及相关产品的生产。"
+    ],
+    "performance": [],
+    "reviewNotes": [
+      "原资料待确认：密度@20℃写作0.095–1.05 g/mL，疑似小数点笔误；技术表照录，不作为已核实的选型依据。",
+      "40℃黏度标注“报告”，原资料未给出固定数值。"
+    ],
+    "sourceFilename": "复合长链磺酸TDS - 副本.docx",
+    "sourceLocator": "T1",
+    "image": ""
+  }
+]

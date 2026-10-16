@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import { productGroups, type ProductGroupId } from "@/lib/product-groups";
 import { useState } from "react";
 import type { ProductSummary } from "@/lib/products";
 import { Badge } from "@/components/ui/badge";
@@ -12,27 +14,38 @@ import { NativeSelect, NativeSelectOption } from "@/components/ui/native-select"
 
 function normalize(value: string) { return value.toLowerCase().replace(/[\s\-－–—]/g, ""); }
 
-export default function ProductCatalog({ products, categories }: {
+export default function ProductCatalog({ products, group = "" }: {
   products: ProductSummary[];
-  categories: { name: string; count: number }[];
+  group?: ProductGroupId | "";
 }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("");
   const [sort, setSort] = useState("source");
+  const groupProducts = products.filter((product) => !group || product.group === group);
+  const categories = [...new Set(groupProducts.map((product) => product.category))].map((name) => ({ name, count: groupProducts.filter((product) => product.category === name).length }));
+  const groupName = productGroups.find((item) => item.id === group)?.name;
   const terms = query.trim().split(/\s+/).filter(Boolean).map(normalize);
-  const visible = products.filter((product) =>
+  const visible = groupProducts.filter((product) =>
     (!category || product.category === category) && terms.every((term) =>
-      normalize(product.model + product.name + product.category + product.introduction).includes(term)),
+      normalize(product.model + product.name + product.category + product.introduction + product.variants.join(" ")).includes(term)),
   );
   if (sort === "model") visible.sort((a, b) => a.model.localeCompare(b.model, "en", { numeric: true }));
   function reset() { setQuery(""); setCategory(""); setSort("source"); }
 
   return (
-    <div className="catalog-browser">
+    <>
+      <nav className="catalog-groups" aria-label="产品大类">
+        {productGroups.map((item, index) => <Link key={item.id} href={`/products?group=${item.id}`} scroll={false} aria-current={group === item.id ? "page" : undefined} className={`catalog-group catalog-tone-${index}`}>
+          <div className="catalog-group-image"><Image src={item.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" /></div>
+          <div className="catalog-group-body"><p><span className="catalog-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")} / {products.filter((product) => product.group === item.id).length} 个产品/系列</p><h2 className="display">{item.name}<span aria-hidden="true">↗</span></h2><p>{item.description}</p></div>
+        </Link>)}
+      </nav>
+      <div className="catalog-group-context"><p>{groupName ? `${groupName} · 按细分类别继续筛选` : "全部产品 · 从三大类开始，或直接搜索型号与用途"}</p>{group ? <Link href="/products" scroll={false}>查看全部产品 →</Link> : null}</div>
+      <div className="catalog-browser">
       <aside className="catalog-sidebar" aria-label="产品分类筛选">
         <p className="catalog-eyebrow">按产品类别浏览</p>
         <div className="catalog-category-buttons">
-          <Button variant="brand" type="button" aria-pressed={!category} onClick={() => setCategory("")}><span>全部产品</span><span>{products.length}</span></Button>
+          <Button variant="brand" type="button" aria-pressed={!category} onClick={() => setCategory("")}><span>全部产品</span><span>{groupProducts.length}</span></Button>
           {categories.map((item, index) => (
             <Button variant="brand" type="button" key={item.name} aria-pressed={category === item.name} onClick={() => setCategory(item.name)}>
               <span className="catalog-category-label"><span className={`catalog-dot catalog-tone-${index % 3}`} aria-hidden="true" />{item.name}</span><span>{item.count}</span>
@@ -42,7 +55,7 @@ export default function ProductCatalog({ products, categories }: {
         <div className="catalog-mobile-category">
           <Label className="leading-normal" htmlFor="product-category">产品类别</Label>
           <NativeSelect variant="brand" id="product-category" value={category} onChange={(event) => setCategory(event.target.value)}>
-            <NativeSelectOption value="">全部产品（{products.length}）</NativeSelectOption>
+            <NativeSelectOption value="">全部产品（{groupProducts.length}）</NativeSelectOption>
             {categories.map((item) => <NativeSelectOption key={item.name} value={item.name}>{item.name}（{item.count}）</NativeSelectOption>)}
           </NativeSelect>
         </div>
@@ -61,7 +74,7 @@ export default function ProductCatalog({ products, categories }: {
           <div className="catalog-sort"><Label className="leading-normal" htmlFor="product-sort">排列方式</Label><NativeSelect variant="brand" id="product-sort" value={sort} onChange={(event) => setSort(event.target.value)}><NativeSelectOption value="source">资料顺序</NativeSelectOption><NativeSelectOption value="model">型号顺序</NativeSelectOption></NativeSelect></div>
         </div>
         <div className="catalog-result-meta">
-          <p role="status" aria-live="polite" aria-atomic="true">{category || "全部产品"} <span>· {visible.length} 款产品</span></p>
+          <p role="status" aria-live="polite" aria-atomic="true">{category || groupName || "全部产品"} <span>· {visible.length} 个产品/系列产品</span></p>
           {query || category || sort !== "source" ? <Button variant="brand" type="button" onClick={reset}>重置筛选</Button> : null}
         </div>
         {visible.length ? (
@@ -71,14 +84,16 @@ export default function ProductCatalog({ products, categories }: {
                 <div className="catalog-card-top"><Badge variant="brand" className="catalog-card-category">{product.category}</Badge><span className="catalog-card-arrow" aria-hidden="true">↗</span></div>
                 <p className="display catalog-model">{product.model}</p>
                 {product.name !== product.model ? <h3>{product.name}</h3> : null}
+                <p className="catalog-card-variants">{product.variants.length ? `型号 / 牌号：${product.variants.join(" · ")}` : null}</p>{product.needsReview ? <p className="catalog-review-badge">部分原资料待确认</p> : null}
                 <p className="catalog-card-description">{product.introduction}</p>
-                <dl className="catalog-preview">{product.preview.map((row, index) => <div key={index}><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl>
+                <p className="catalog-card-variants">{product.previewLabel}</p><dl className="catalog-preview">{product.preview.map((row, index) => <div key={index}><dt>{row.label}</dt><dd>{row.value}</dd></div>)}</dl>
                 <span className="catalog-card-link">产品详情与技术指标 <span aria-hidden="true">↗</span></span>
               </Link></Card>
             ))}
           </div>
-        ) : <div className="catalog-empty"><p className="display">没有找到匹配的产品</p><p>试试其他型号、名称或用途关键词，或清除当前分类筛选。</p><Button variant="brand" type="button" onClick={reset}>查看全部 {products.length} 款产品</Button></div>}
+        ) : <div className="catalog-empty"><p className="display">没有找到匹配的产品</p><p>试试其他型号、名称或用途关键词，或清除当前分类筛选。</p><Button variant="brand" type="button" onClick={reset}>查看全部 {groupProducts.length} 个产品/系列产品</Button></div>}
       </div>
     </div>
+    </>
   );
 }

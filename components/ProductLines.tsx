@@ -68,8 +68,8 @@ export default function ProductLines() {
                   <div className="relative z-[2] flex flex-1 flex-col bg-card-cream p-5">
                     <h3 className="display text-[22px]">{p.title}</h3>
                     <p className="mt-3 flex-1 text-[13.5px] leading-[1.7] text-muted">{p.desc}</p>
-                    <Link href={p.index === "01" ? "/products" : "/contact"} className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold">
-                      {p.index === "01" ? "浏览单剂产品" : "咨询此类产品"}
+                    <Link href={p.index === "01" ? "/products?group=additives" : p.index === "02" ? "/products?group=raw-materials" : p.index === "03" ? "/products?group=lubricants" : "/contact"} className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold">
+                      {p.index === "04" ? "咨询定制服务" : "浏览此类产品"}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                         <path d="M5 12h14M13 6l6 6-6 6" />
                       </svg>
