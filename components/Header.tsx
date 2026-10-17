@@ -62,7 +62,7 @@ export default function Header() {
       {/* main row */}
       <div className="flex items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-2 leading-none sm:gap-3" aria-label="努邦科技首页">
-          <Image src="/images/company-logo.png" alt="" width={1254} height={1254} sizes="48px" className="h-11 w-11 shrink-0 object-contain sm:h-12 sm:w-12" preload />
+          <Image src="/images/company-logo.png" alt="" width={1254} height={1254} sizes="(min-width: 640px) 60px, 56px" className="h-14 w-14 shrink-0 object-contain sm:h-15 sm:w-15" preload />
           <span>
           <span className="display block text-[22px] tracking-tight sm:text-[26px]">
             NUBANG<span className="text-accent-red">.</span>
