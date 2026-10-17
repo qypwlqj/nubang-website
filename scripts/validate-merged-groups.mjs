@@ -38,4 +38,4 @@ for (const file of ['components/HomeSections.tsx', 'app/services/page.tsx']) {
  assert.ok(content.includes('实验室软件定制'));
  assert.ok(!content.includes('实验室设备定制'));
 }
-console.log('PASS: four revised homepage business lines; software customization copy on homepage/services.');
+console.log('PASS: four retained material/equipment business lines; software customization copy on homepage/services.');

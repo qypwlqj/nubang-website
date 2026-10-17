@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import sharp from 'sharp';
 
-const images = ['product-additives', 'product-raw-materials', 'product-lubricants', 'product-custom', 'lab-solutions'];
+const images = ['business-raw-materials', 'business-lubricants', 'business-lab-equipment', 'business-custom', 'lab-solutions'];
 const home = await readFile('.next/server/app/index.html', 'utf8');
 const about = await readFile('.next/server/app/about.html', 'utf8');
 const lab = await readFile('.next/server/app/lab.html', 'utf8');
