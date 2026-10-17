@@ -1,3 +1,4 @@
+import SoftwareServices from "@/components/SoftwareServices";
 import EditorialScene from "@/components/EditorialScene";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
@@ -48,6 +49,7 @@ export default function ServicesPage() {
             </h1>
           </Reveal>
 
+          <SoftwareServices />
           <Reveal delay={80}><EditorialScene kind="services" /></Reveal>
           <div className="mt-12 grid gap-4 md:grid-cols-3">
             {SERVICES.map((s, i) => (

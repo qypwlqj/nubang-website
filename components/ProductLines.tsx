@@ -1,3 +1,4 @@
+import AISoftwareCard from "@/components/AISoftwareCard";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
@@ -56,15 +57,16 @@ export default function ProductLines() {
         <div className="mx-auto max-w-6xl px-5 sm:px-10">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <p className="text-[11px] font-semibold tracking-[0.3em] text-muted">02 — 润滑产品</p>
-              <h2 id="product-lines-heading" className="display mt-5 text-[32px] leading-[1.1] sm:text-[46px]">四大产品线</h2>
+              <p className="text-[11px] font-semibold tracking-[0.3em] text-muted">02 — 产品与服务</p>
+              <h2 id="product-lines-heading" className="display mt-5 text-[32px] leading-[1.1] sm:text-[46px]">五大产品线</h2>
             </div>
             <p className="max-w-sm text-[14px] leading-[1.7] text-muted">
-              从原料、润滑油脂成品到实验室设备与定制服务，支持配方、检测与应用需求。
+              原料、润滑油脂成品、实验室设备、定制服务与软件服务，连接材料、检测和企业数字化管理。
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <Reveal className="mt-10"><AISoftwareCard /></Reveal>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {PRODUCTS.map((p, i) => (
               <Reveal key={p.index} delay={i * 90}>
                 <Card asChild variant="brand"><article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-nav-line bg-card-cream transition-transform duration-500 hover:-translate-y-1.5 grain">

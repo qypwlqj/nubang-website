@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+const read = path => readFileSync(new URL('../' + path, import.meta.url), 'utf8');
+const product = read('components/ProductLines.tsx');
+assert.ok(product.includes('五大产品线'));
+assert.ok(!product.includes('四大产品线'));
+assert.equal((product.match(/index: "/g) || []).length, 4);
+assert.ok(product.includes('<AISoftwareCard />'));
+const featured = read('components/AISoftwareCard.tsx');
+for (const value of ['软件服务', 'AI 大模型', '化学实验室', '化工公司', '一站式解决方案', 'href="/services"']) assert.ok(featured.includes(value), value);
+const detail = read('components/SoftwareServices.tsx');
+for (const value of ['实验室软件定制', '化工企业管理软件', 'AI 大模型应用', '人工复核', 'href="/contact"']) assert.ok(detail.includes(value), value);
+assert.ok(read('app/services/page.tsx').includes('<SoftwareServices />'));
+console.log('PASS: five business lines, prominent AI/software card, independent detail route, scoped capabilities and review caveat.');
