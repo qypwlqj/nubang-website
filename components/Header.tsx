@@ -55,13 +55,6 @@ export default function Header() {
     >
       {/* utility strip */}
       <div className="hidden items-center gap-5 border-b border-nav-line px-6 text-[13px] text-muted md:flex lg:px-8">
-        <a href="tel:13813339996" className="flex items-center gap-2 py-2.5 hover:text-ink">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-          138 1333 9996
-        </a>
-        <span className="h-4 w-px bg-nav-rule" aria-hidden="true" />
         <span className="py-2.5">上海市嘉定区胜辛南路 500 号</span>
         <span className="ml-auto py-2.5">润滑油原料 · 添加剂 · 成品油定制</span>
       </div>
@@ -122,7 +115,7 @@ export default function Header() {
         style={{ top: headerHeight }}
       >
         <SheetTitle className="sr-only">努邦科技网站导航</SheetTitle>
-        <SheetDescription className="sr-only">浏览网站页面或拨打电话咨询。按 Escape 关闭菜单。</SheetDescription>
+        <SheetDescription className="sr-only">浏览网站页面与联系方式。按 Escape 关闭菜单。</SheetDescription>
         <SheetClose asChild>
           <Button variant="brand" type="button" aria-label="关闭菜单" className="mobile-navigation-close flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-nav-rule bg-white">
             <span className="h-[2px] w-4 translate-y-[3.5px] rotate-45 bg-ink" />
@@ -143,9 +136,9 @@ export default function Header() {
               </SheetClose>
             ))}
             <SheetClose asChild>
-              <Button asChild variant="brand"><a href="tel:13813339996" className="mt-3 rounded-full bg-ink px-5 py-3 text-center text-[14px] font-semibold text-white">
-                拨打 138 1333 9996
-              </a></Button>
+              <Button asChild variant="brand"><Link href="/contact" className="mt-3 rounded-full bg-ink px-5 py-3 text-center text-[14px] font-semibold text-white">
+                查看联系方式
+              </Link></Button>
             </SheetClose>
           </nav>
         </div>

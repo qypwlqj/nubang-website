@@ -1,3 +1,4 @@
+import EditorialScene from "@/components/EditorialScene";
 import CompanyAchievements from "@/components/CompanyAchievements";
 import LabScene from "@/components/LabScene";
 import Link from "next/link";
@@ -31,6 +32,7 @@ export function HomeAbout() {
             业务覆盖润滑油原料、添加剂与成品油供应，并提供成品油定制与化学实验室整体解决方案，
             从原料选型到应用支持，为工业客户提供合适的润滑方案。
           </p>
+          <EditorialScene kind="company" />
           <CompanyAchievements />
           <SectionLink href="/about">了解公司简介</SectionLink>
         </Reveal>
@@ -78,7 +80,7 @@ export function HomeLab() {
 }
 
 const SERVICES = [
-  { title: "成品油定制 & 实验室设备定制", description: "围绕您的工况、产线与预算，提供成品油定制调配与实验室设备定制服务。", Icon: Wrench },
+  { title: "成品油定制 & 实验室软件定制", description: "围绕工况与实验室业务流程，提供成品油调配、检测数据管理、报告生成与分析流程等软件定制支持。", Icon: Wrench },
   { title: "售后服务与保障", description: "跟进产品使用与用油异常，协助定位技术问题，为后续应用提供支持。", Icon: Headphones },
   { title: "专业原料技术指导", description: "提供原料选型、配方优化与应用技术指导，让好原料发挥好效果。", Icon: Lightbulb },
 ];
@@ -91,6 +93,7 @@ export function HomeServices() {
           <p className="text-[11px] font-semibold tracking-[0.3em] text-muted">04 — 服务与支持</p>
           <h2 id="home-services-heading" className="display mt-5 text-[32px] leading-[1.1] sm:text-[46px]">不止卖产品，<br className="sm:hidden" />更陪伴每一公里运转。</h2>
         </Reveal>
+        <Reveal delay={80}><EditorialScene kind="services" /></Reveal>
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {SERVICES.map(({ title, description, Icon }, index) => (
             <Reveal key={title} delay={index * 100}>
@@ -119,8 +122,6 @@ export function HomeContact() {
             <p className="mt-6 max-w-xl text-[15px] leading-[1.8] text-ink/70">咨询原料、添加剂、成品油或实验室方案，与我们沟通您的实际应用需求。</p>
           </div>
           <div className="flex flex-col items-start lg:items-end">
-            <a href="tel:13813339996" className="display text-[26px] leading-none transition-opacity hover:opacity-65 sm:text-[30px]">138 1333 9996</a>
-            <p className="mt-3 text-[12px] text-ink/60">微信同号 · 欢迎沟通您的需求</p>
             <SectionLink href="/contact">查看联系方式</SectionLink>
           </div>
         </Reveal>

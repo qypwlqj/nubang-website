@@ -453,7 +453,7 @@ body[data-scroll-locked] .mobile-navigation-sheet {
 }
 
 /* Three-level product collection: broad families, contextual types, model cards. */
-.catalog-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-bottom: 28px; }
+.catalog-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 28px; }
 .catalog-group { overflow: hidden; border: 1px solid var(--color-nav-rule); border-radius: 22px; background: var(--color-card-cream); transition: border-color .2s, transform .2s; }
 .catalog-group:hover { transform: translateY(-3px); }
 .catalog-group[aria-current="page"] { border-color: var(--color-ink); box-shadow: 0 0 0 1px var(--color-ink); }

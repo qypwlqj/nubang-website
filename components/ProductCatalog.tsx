@@ -37,11 +37,11 @@ export default function ProductCatalog({ products, group = "" }: {
     <>
       <nav className="catalog-groups" aria-label="产品大类">
         {productGroups.map((item, index) => <Link key={item.id} href={`/products?group=${item.id}`} scroll={false} aria-current={group === item.id ? "page" : undefined} className={`catalog-group catalog-tone-${index}`}>
-          <div className="catalog-group-image"><Image src={item.image} alt="" fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" /></div>
+          <div className="catalog-group-image"><Image src={item.image} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" /></div>
           <div className="catalog-group-body"><p><span className="catalog-dot" aria-hidden="true" />{String(index + 1).padStart(2, "0")} / {products.filter((product) => product.group === item.id).length} 个产品/系列</p><h2 className="display">{item.name}<ArrowUpRight size={20} aria-hidden="true" /></h2><p>{item.description}</p></div>
         </Link>)}
       </nav>
-      <div className="catalog-group-context"><p>{groupName ? `${groupName} · 按细分类别继续筛选` : "全部产品 · 从三大类开始，或直接搜索型号与用途"}</p>{group ? <Link href="/products" scroll={false}>查看全部产品 →</Link> : null}</div>
+      <div className="catalog-group-context"><p>{groupName ? `${groupName} · 按细分类别继续筛选` : "全部产品 · 从两大类开始，或直接搜索型号与用途"}</p>{group ? <Link href="/products" scroll={false}>查看全部产品 →</Link> : null}</div>
       <div className="catalog-browser">
       <aside className="catalog-sidebar" aria-label="产品分类筛选">
         <p className="catalog-eyebrow">按产品类别浏览</p>

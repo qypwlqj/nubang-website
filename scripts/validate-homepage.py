@@ -44,5 +44,5 @@ for route in ['/about', '/products', '/lab', '/services', '/contact']:
     assert page.links.count(route) >= 2, f'Missing homepage section entry: {route}'
 assert page.nav_links == ['/', '/about', '/products', '/lab', '/services', '/contact'], page.nav_links
 assert all('#' not in href for href in page.nav_links)
-assert 'tel:13813339996' in page.links
-print('PASS: five ordered homepage overview sections; five detail-page entries; six route-based nav links; one H1; contact phone.')
+assert not any(link.startswith('tel:') for link in page.links)
+print('PASS: five ordered homepage overview sections; five detail-page entries; six route-based nav links; one H1; no phone contacts.')

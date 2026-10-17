@@ -29,7 +29,7 @@ const originalProducts: CatalogProduct[] = categories.flatMap((category, categor
   category.products.map((product) => ({ ...product, ...classifyExistingProduct(category.name), categoryIndex, slug: product.model.toLowerCase(), variants: [], applications: [], performance: [], reviewNotes: [], sourceFilename: "", sourceLocator: "", image: "" })),
 );
 const importedProducts: CatalogProduct[] = importedData.map((product) => ({
-  ...product, group: product.group as ProductGroupId,
+  ...product, group: (product.group === "additives" ? "raw-materials" : product.group) as ProductGroupId,
   categoryIndex: product.group === "additives" ? 0 : product.group === "lubricants" ? 1 : 2,
 }));
 export const products: CatalogProduct[] = [...originalProducts, ...importedProducts];

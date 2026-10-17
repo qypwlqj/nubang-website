@@ -6,37 +6,45 @@ import { Card } from "@/components/ui/card";
 const PRODUCTS = [
   {
     index: "01",
-    image: "/images/product-additives.webp",
-    title: "添加剂",
-    en: "ADDITIVES",
-    desc: "抗磨、极压、抗氧化等高性能功能添加剂，显著提升油品综合表现与使用寿命。",
-    cls: "bg-accent-red cell-solid",
-    dark: false,
-  },
-  {
-    index: "02",
-    image: "/images/product-raw-materials.webp",
+    image: "/images/business-raw-materials.webp",
     title: "原料",
     en: "RAW MATERIALS",
-    desc: "优质基础油与功能性原料，供应链稳定，批次品质可追溯，适配多种调和需求。",
+    desc: "基础油、功能添加剂、润滑脂增稠原料与添加剂中间体，按配方功能与生产需求分类选择。",
+    href: "/products?group=raw-materials",
+    linkLabel: "浏览原料产品",
     cls: "bg-accent-yellow cell-solid",
     dark: false,
   },
   {
-    index: "03",
-    image: "/images/product-lubricants.webp",
-    title: "成品油",
-    en: "LUBRICANTS",
-    desc: "液压油、齿轮油、金属加工液等工业油品，规格齐全，满足通用工业场景需求。",
+    index: "02",
+    image: "/images/business-lubricants.webp",
+    title: "润滑油脂成品",
+    en: "FINISHED LUBRICANTS",
+    desc: "润滑油、润滑脂及相关成品，按设备工况与应用场景查找产品，查看技术指标与使用信息。",
+    href: "/products?group=lubricants",
+    linkLabel: "浏览润滑油脂成品",
     cls: "bg-accent-blue cell-solid",
     dark: false,
   },
   {
+    index: "03",
+    image: "/images/business-lab-equipment.webp",
+    title: "实验室设备",
+    en: "LAB EQUIPMENT",
+    desc: "油品性能检测分析仪器、模拟台架与评定设备，配合实验室规划、安装调试与人员培训。",
+    href: "/lab",
+    linkLabel: "了解实验室设备",
+    cls: "bg-accent-red cell-solid",
+    dark: false,
+  },
+  {
     index: "04",
-    image: "/images/product-custom.webp",
-    title: "成品油定制",
+    image: "/images/business-custom.webp",
+    title: "定制服务",
     en: "CUSTOM BLENDING",
     desc: "按设备工况与工艺要求定制调配成品油，从配方设计、小样测试到批量交付一站式服务。",
+    href: "/contact",
+    linkLabel: "咨询定制服务",
     cls: "bg-card-dark cell-dark grain-dark",
     dark: true,
   },
@@ -52,7 +60,7 @@ export default function ProductLines() {
               <h2 id="product-lines-heading" className="display mt-5 text-[32px] leading-[1.1] sm:text-[46px]">四大产品线</h2>
             </div>
             <p className="max-w-sm text-[14px] leading-[1.7] text-muted">
-              从原料、添加剂到成品油与定制调配，覆盖润滑产品全链路。
+              从原料、润滑油脂成品到实验室设备与定制服务，支持配方、检测与应用需求。
             </p>
           </Reveal>
 
@@ -68,8 +76,8 @@ export default function ProductLines() {
                   <div className="relative z-[2] flex flex-1 flex-col bg-card-cream p-5">
                     <h3 className="display text-[22px]">{p.title}</h3>
                     <p className="mt-3 flex-1 text-[13.5px] leading-[1.7] text-muted">{p.desc}</p>
-                    <Link href={p.index === "01" ? "/products?group=additives" : p.index === "02" ? "/products?group=raw-materials" : p.index === "03" ? "/products?group=lubricants" : "/contact"} className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold">
-                      {p.index === "04" ? "咨询定制服务" : "浏览此类产品"}
+                    <Link href={p.href} className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold">
+                      {p.linkLabel}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="transition-transform group-hover:translate-x-1" aria-hidden="true">
                         <path d="M5 12h14M13 6l6 6-6 6" />
                       </svg>

@@ -15,10 +15,6 @@ export default function Footer() {
             </p>
           </div>
           <div className="space-y-3 text-[14px]">
-            <a href="tel:13813339996" className="display block text-[24px] hover:text-accent-yellow">
-              138 1333 9996
-            </a>
-            <p className="text-paper/60">微信同号：138 1333 9996</p>
             <a
               href="https://www.douyin.com/search/%E5%8A%AA%E9%82%A6%E7%A7%91%E6%8A%80"
               target="_blank"

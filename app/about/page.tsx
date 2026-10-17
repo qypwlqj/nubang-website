@@ -1,3 +1,4 @@
+import EditorialScene from "@/components/EditorialScene";
 import type { Metadata } from "next";
 import { COMPANY_STATS } from "@/lib/company";
 import Reveal from "@/components/Reveal";
@@ -27,6 +28,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
+          <Reveal delay={80}><EditorialScene kind="company" /></Reveal>
           <Reveal delay={120}>
             <dl className="mt-14 grid grid-cols-2 gap-y-10 border-t border-ink/10 pt-10 md:grid-cols-5">
               {COMPANY_STATS.map((s) => (

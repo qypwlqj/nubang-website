@@ -1,3 +1,4 @@
+import EditorialScene from "@/components/EditorialScene";
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import { Card } from "@/components/ui/card";
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 const SERVICES = [
   {
     index: "01",
-    title: "成品油定制 & 实验室设备定制",
-    desc: "围绕您的工况、产线与预算，提供成品油定制调配与实验室设备定制服务，方案落地快。",
+    title: "成品油定制 & 实验室软件定制",
+    desc: "围绕您的工况与实验室业务流程，提供成品油定制调配，以及检测数据管理、报告生成和分析流程等实验室软件定制服务。",
     icon: (
       <path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.7-.7-.7-2.7 2.6-2.6z" />
     ),
@@ -47,6 +48,7 @@ export default function ServicesPage() {
             </h1>
           </Reveal>
 
+          <Reveal delay={80}><EditorialScene kind="services" /></Reveal>
           <div className="mt-12 grid gap-4 md:grid-cols-3">
             {SERVICES.map((s, i) => (
               <Reveal key={s.index} delay={i * 100}>

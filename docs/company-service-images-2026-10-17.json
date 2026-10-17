@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-17",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "name": "company-introduction.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium industrial lubricant supplier company-introduction website editorial banner. Generate one photorealistic horizontal landscape photograph 1536x1024. A refined modest industrial materials supplier sample consultation room: on a warm ivory desk in center a neat small tray of three amber lubricant sample bottles, one clear base oil sample, neutral metal sample tin, closed unbranded technical folder; through glass behind is an orderly distribution storage area of steel drums, softly out of focus, not a manufacturing plant. Beautiful natural side light, honest realistic materials, editorial commercial photography, warm ivory, amber, charcoal and brushed steel palette. Wide carefully balanced composition, all key objects concentrated in center horizontal third so a 21:9 crop remains complete, safe margins. No humans needed, no logos, no text, no certification plaques, no certificates, no dramatic factory machinery or claims of company-owned assets. This is an illustrative commercial scene, not documentary proof of a specific company.",
+      "original": "generated_images/exec-06340c20-6e4b-4003-a5a8-60fcf56ea194.png",
+      "description": "AI-generated illustrative supplier consultation room and lubricant samples; not company documentary photography",
+      "objectPosition": "50% 62%"
+    },
+    {
+      "name": "service-support.webp",
+      "prompt": "Use case: photorealistic-natural. Asset type: premium website editorial banner for laboratory software customization and technical support. Generate one horizontal photorealistic 1536x1024 photograph. Close editorial perspective across a laboratory analyst's software workstation in a clean modern lubricant testing lab: central wide monitor displays a restrained abstract software dashboard of small charcoal and warm amber chart shapes, sample workflow tiles and simple graphs with no legible text; beside it a laptop and a short neat row of amber sample vials, slim notebook, keyboard. Softly blurred analytical instruments in background. Main monitor screen and sample vials fit safely within the central horizontal third so image survives a wide21:9 crop. Sophisticated natural warm light, ivory surfaces, brushed steel, charcoal gray and restrained amber, visually calm commercial editorial photography with realistic monitor perspective and no neon. Software and data workflow are primary subject, equipment only background. No people, no logos, no words, no numbers, no certificates, no marketing badges, no watermarks, no holograms, no futuristic glowing interfaces. Illustrative scene not a claim about a specific proprietary product or company's actual lab.",
+      "original": "generated_images/exec-283128fd-904e-4ebb-a409-cc1f2a3068ea.png",
+      "description": "AI-generated illustrative laboratory software workflow workstation; screen charts not product claims",
+      "objectPosition": "50% 50%"
+    }
+  ],
+  "optimization": "sharp,1200x800,WebP quality84 effort6; no semantic edits"
+}
