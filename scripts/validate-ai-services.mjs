@@ -11,4 +11,8 @@ for (const value of ['软件服务', 'AI 大模型', '化学实验室', '化工�
 const detail = read('components/SoftwareServices.tsx');
 for (const value of ['实验室软件定制', '化工企业管理软件', 'AI 大模型应用', '人工复核', 'href="/contact"']) assert.ok(detail.includes(value), value);
 assert.ok(read('app/services/page.tsx').includes('<SoftwareServices />'));
-console.log('PASS: five business lines, prominent AI/software card, independent detail route, scoped capabilities and review caveat.');
+assert.ok(product.indexOf('<AISoftwareCard />') > product.indexOf('PRODUCTS.map'));
+assert.ok(product.includes('auto-rows-fr'));
+assert.ok(!featured.includes('ai-software-card'));
+assert.ok(featured.includes('aspect-[4/3]'));
+console.log('PASS: five peer business cards, software after custom services, consistent card proportions, independent detail route and review caveat.');

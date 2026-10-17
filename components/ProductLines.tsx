@@ -65,13 +65,12 @@ export default function ProductLines() {
             </p>
           </Reveal>
 
-          <Reveal className="mt-10"><AISoftwareCard /></Reveal>
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-10 grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.map((p, i) => (
               <Reveal key={p.index} delay={i * 90}>
                 <Card asChild variant="brand"><article className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-nav-line bg-card-cream transition-transform duration-500 hover:-translate-y-1.5 grain">
                   <div className="relative aspect-[4/3] overflow-hidden bg-card-dark">
-                    <Image src={p.image} alt={`${p.title}产品应用示例（AI 生成）`} fill sizes="(min-width: 1280px) 256px, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" />
+                    <Image src={p.image} alt={`${p.title}产品应用示例（AI 生成）`} fill sizes="(min-width: 1024px) 352px, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none" />
                     <span className={`absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full text-[13px] font-bold ${p.cls} ${p.dark ? "text-paper" : "text-ink"}`}>{p.index}</span>
                   </div>
                   <div className={`relative z-[2] px-5 py-3 text-[9px] font-bold tracking-[0.15em] ${p.cls} ${p.dark ? "text-paper/80" : "text-ink/70"}`}>{p.en}</div>
@@ -88,6 +87,7 @@ export default function ProductLines() {
                 </article></Card>
               </Reveal>
             ))}
+            <Reveal delay={360}><AISoftwareCard /></Reveal>
           </div>
           <p className="mt-5 text-[11px] leading-relaxed text-muted">产品配图为 AI 生成示意，不代表实际品牌、包装或交付规格。</p>
         </div>
